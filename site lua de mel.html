@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lua de Mel">
+<meta name="theme-color" content="#0d1f1a">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+<title>Lua de Mel - Africa do Sul</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gd:#0d1f1a;--gm:#1a4a35;--ga:#2d7a5a;--gl:#4caf85;--gp:#a8d5be;--go:#c9963a;--gol:#e8c068;--cr:#f5ede0;--tm:#f0ebe3;--ts:#8aab98;--td:#557060;--bd:rgba(255,255,255,0.07);--cb:rgba(255,255,255,0.04)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:#0d1f1a}body{font-family:"DM Sans",sans-serif;background:#0d1f1a;background:var(--gd);color:var(--tm);min-height:100vh;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(45,122,90,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 80%,rgba(201,150,58,.08) 0%,transparent 50%);pointer-events:none;z-index:0}
+.app{position:relative;z-index:1;max-width:520px;margin:0 auto;padding-bottom:140px}
+.hero{padding:52px 22px 24px;text-align:center}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(201,150,58,.15);border:1px solid rgba(201,150,58,.3);color:var(--gol);font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:14px}
+.hero h1{font-family:"Playfair Display",serif;font-size:28px;font-weight:600;line-height:1.2;color:var(--cr);margin-bottom:4px}
+.hero h1 em{font-style:italic;color:var(--gp)}
+.hsub{font-size:12px;color:var(--ts);margin-bottom:14px}
+.hpills{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.hpill{background:var(--cb);border:1px solid var(--bd);border-radius:99px;padding:4px 12px;font-size:11px;color:var(--gp)}
+.hcount{display:inline-block;background:var(--cb);border:1px solid var(--bd);border-radius:10px;padding:8px 18px;font-size:11px;color:var(--ts)}
+.hcount span{font-family:"Playfair Display",serif;font-size:22px;color:var(--gol);display:block}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;background:rgba(13,31,26,.97);backdrop-filter:blur(16px);border-top:1px solid var(--bd);display:flex;z-index:9999;padding-bottom:env(safe-area-inset-bottom,0px)}
+.nb{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 1px 8px;background:transparent;border:none;color:var(--td);font-family:"DM Sans",sans-serif;font-size:9px;cursor:pointer;transition:color .2s}
+.nb.active{color:var(--gl)}
+.ni{font-size:15px;line-height:1}
+.sec{display:none;padding:0 13px;animation:fi .2s ease}
+.sec.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:var(--cb);border:1px solid var(--bd);border-radius:16px;padding:13px 14px;margin-bottom:9px}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}
+.ct{font-family:"Playfair Display",serif;font-size:14px;color:var(--cr)}
+.badge{font-size:10px;font-weight:500;padding:2px 7px;border-radius:99px;white-space:nowrap}
+.bg{background:rgba(201,150,58,.2);color:var(--gol)}
+.bk{background:rgba(76,175,133,.15);color:var(--gl)}
+.bm{background:rgba(255,255,255,.06);color:var(--ts)}
+.dc{background:linear-gradient(135deg,rgba(45,122,90,.25),rgba(201,150,58,.1));border:1px solid rgba(76,175,133,.2);border-radius:16px;padding:14px 16px;margin-bottom:9px}
+.dn{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--gl);margin-bottom:4px}
+.dt{font-family:"Playfair Display",serif;font-size:18px;color:var(--cr);margin-bottom:2px}
+.ds{font-size:11px;color:var(--ts)}
+.ti{display:flex;gap:11px;padding-bottom:12px}
+.tl{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px}
+.tm{font-size:9px;color:var(--go);font-weight:500;text-align:center;line-height:1.2;min-height:14px}
+.td{width:8px;height:8px;border-radius:50%;background:var(--ga);border:2px solid var(--gl);flex-shrink:0;margin:3px 0}
+.td.s{background:var(--go);border-color:var(--gol)}
+.tl2{width:1px;flex:1;background:var(--bd);min-height:12px}
+.tc{flex:1;padding-top:1px}
+.tt{font-size:12px;font-weight:500;color:var(--cr);margin-bottom:2px}
+.tx{font-size:10px;color:var(--ts);line-height:1.5}
+.tg{display:inline-block;font-size:9px;padding:2px 6px;border-radius:4px;margin-top:3px}
+.tgr{background:rgba(220,80,80,.15);color:#e88aaa}
+.tgy{background:rgba(201,150,58,.15);color:var(--go)}
+.ir{display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--bd);gap:9px}
+.ir:last-child{border-bottom:none}
+.ik{font-size:11px;color:var(--ts);flex-shrink:0;padding-top:1px}
+.iv{font-size:11px;color:var(--cr);text-align:right;line-height:1.4}
+.db{display:flex;align-items:center;gap:6px;background:rgba(76,175,133,.08);border:1px solid rgba(76,175,133,.2);border-radius:8px;padding:6px 10px;margin-top:6px;text-decoration:none;color:var(--gl);font-size:11px;font-weight:500}
+.dr{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.di{display:inline-flex;align-items:center;gap:5px;background:rgba(76,175,133,.08);border:1px solid rgba(76,175,133,.2);border-radius:6px;padding:4px 8px;text-decoration:none;color:var(--gl);font-size:10px}
+.pi{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--bd)}
+.pi:last-child{border-bottom:none}
+.pic{width:32px;height:32px;border-radius:9px;background:var(--gm);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.pn{font-size:12px;font-weight:500;color:var(--cr);margin-bottom:1px}
+.pa{font-size:10px;color:var(--ts);line-height:1.4}
+.pp{font-size:10px;color:var(--go);margin-top:1px}
+.pd{font-size:10px;color:var(--gp);margin-top:3px;line-height:1.5;font-style:italic}
+.ci{display:flex;align-items:center;gap:11px;padding:7px 0;border-bottom:1px solid var(--bd);cursor:pointer;user-select:none}
+.ci:last-child{border-bottom:none}
+.ck{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--td);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.ci.done .ck{background:var(--ga);border-color:var(--ga)}
+.ci.done .ck::after{content:"";width:4px;height:8px;border:2px solid #fff;border-top:none;border-left:none;transform:rotate(45deg) translateY(-1px);display:block}
+.cl{font-size:12px;color:var(--tm)}
+.ci.done .cl{color:var(--td);text-decoration:line-through}
+.pw{margin-top:9px}
+.pb0{height:3px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin-bottom:4px}
+.pb1{height:100%;background:linear-gradient(90deg,var(--ga),var(--gl));border-radius:99px;transition:width .4s}
+.px{font-size:10px;color:var(--ts)}
+.tip{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--bd);font-size:11px;color:var(--ts);line-height:1.5}
+.tip:last-child{border-bottom:none}
+.tic{font-size:13px;flex-shrink:0;margin-top:1px}
+.sh{font-family:"Playfair Display",serif;font-size:10px;color:var(--td);letter-spacing:1px;text-transform:uppercase;margin:16px 0 7px;padding-left:2px}
+.al{background:rgba(201,150,58,.08);border:1px solid rgba(201,150,58,.2);border-radius:9px;padding:9px 11px;margin-bottom:9px;font-size:10px;color:var(--gol);line-height:1.6}
+.al strong{display:block;margin-bottom:1px;font-size:9px;letter-spacing:.5px;text-transform:uppercase}
+.alr{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.2);border-radius:9px;padding:9px 11px;margin-bottom:9px;font-size:10px;color:#e88aaa;line-height:1.6}
+.alr strong{display:block;margin-bottom:1px;font-size:9px;letter-spacing:.5px;text-transform:uppercase}
+.ch2{font-size:10px;font-weight:500;color:var(--go);letter-spacing:.5px;text-transform:uppercase;padding:8px 0 4px;border-bottom:1px solid rgba(201,150,58,.2);margin-bottom:2px}
+.nc{background:linear-gradient(135deg,rgba(201,150,58,.12),rgba(45,122,90,.08));border:1px solid rgba(201,150,58,.25);border-radius:16px;padding:14px;margin-bottom:9px}
+</style>
+</head>
+<body>
+<script>
+function goTo(id, btn) {
+  document.querySelectorAll(".sec").forEach(function(s){ s.classList.remove("active"); });
+  document.querySelectorAll(".nb").forEach(function(b){ b.classList.remove("active"); });
+  document.getElementById("sec-" + id).classList.add("active");
+  btn.classList.add("active");
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
+window.addEventListener("DOMContentLoaded", function() {
+  var d = Math.ceil((new Date("2026-05-14T22:45:00") - new Date()) / 86400000);
+  var e = document.getElementById("cdn");
+  if (e) e.textContent = d > 0 ? d : (d === 0 ? "Hoje!" : "Ja partimos!");
+  initChecklists();
+});
+function initChecklists() {
+  var lists = [
+    {items:["Repelente forte DEET 30%+ (malaria no Kruger!)","Protetor solar FPS 50+","Binoculo para o safari","Roupas bege/caqui/verde para safari","Roupa quente para safari noturno","Chapeu / bone com aba larga","Capinha de celular com cordinha","Protetor labial com FPS","Adaptador tomada Tipo M"], id:"ld-af", key:"af3"},
+    {items:["Antialergico","Diamox","Vonau (enjoo)","Dramin","Remedio para diarreia","Advil","Anti-inflamatorio","Neosoro","Nebacetin","Creme tira coceira de picada","Colirio lagrima artificial","Soro para lente de contato","Freeco","Esparadrapo"], id:"ld-me", key:"me3"},
+    {items:["Calcinhas","Meia","Top","Sutia","Pijama","Lingerie","Cachecol","Travesseiro de pescoco (aviao)","Bolsinha de moeda","Chinelo","Tenis para caminhada","Oculos de sol","Oculos de grau","Chiquinha de cabelo","Bone","Roupa de banho / biquini","Roupas casuais (Cape Town, Joburg)","Roupas elegantes (jantar GOLD e Tokara)","Roupa termica / casaco (safaris noturnos)"], id:"ld-rof", key:"rof3"},
+    {items:["Cueca","Meia","Pijama / bermuda dormir","Travesseiro de pescoco (aviao)","Chinelo","Tenis para caminhada","Oculos de sol","Bone","Cinto","Bermuda / shorts","Calca jeans","Camisetas casuais","Camisa social / polo (jantar GOLD e Tokara)","Moletom / casaco (safaris noturnos)","Roupa de banho"], id:"ld-rog", key:"rog3"},
+    {items:["Skin care (limpeza, tonico, serum, hidratante)","Hidratante facial","Demaquilante","Faixinha para limpar o rosto","Mascara de cabelo","Lentes de contato","Soro para lente de contato","Shampoo","Condicionador","Escova de cabelo","Serum de cabelo","Escova de dente","Pasta de dente","Fio dental e cotonete","Sabonete","Creme Sallve","Desodorante","Maquiagem","Perfume","Protetor labial","Creme de mao"], id:"ld-hif", key:"hif3"},
+    {items:["Shampoo","Condicionador","Escova de dente","Pasta de dente","Fio dental","Sabonete","Desodorante","Protetor solar rosto","Barbeador / lamina de barbear","Creme de barbear","Perfume / desodorante colonia"], id:"ld-hig", key:"hig3"},
+    {items:["Carregador de celular - Fernanda","Carregador de celular - Gustavo","Bateria portatil","Camera fotografica + carregador","Tripe com controle remoto","Fone de ouvido - Fernanda","Fone de ouvido - Gustavo","Cartao de memoria extra"], id:"ld-el", key:"el3"},
+    {items:["Dinheiro ZAR (Rand) ou USD","Garrafa de agua - Fernanda","Garrafa de agua - Gustavo","Toalhinhas Huggies","Alcool gel","Mascara descartavel","Caneta (formularios de imigracao)","Creme de mao extra para o voo","Kindle (Fernanda)","Lubrificante (Fernanda)","Saco a vacuo - Fernanda","Saco a vacuo - Gustavo","Balanca de mala - Fernanda","Balanca de mala - Gustavo"], id:"ld-ou", key:"ou3"}
+  ];
+  var docsList = ["Passaporte Fernanda (validade +6 meses)","Passaporte Gustavo (validade +6 meses)","Passagem LATAM impressa (JZZMFZ)","Passagens Airlink impressas (Z9N5EX)","Cartao de vacina Febre Amarela - ambos","Seguro viagem para os dois","Comprovantes de todas as reservas","Cartao de credito internacional","CNH Internacional - ambos","Confirmacao Europcar JHB (1200314755)","Confirmacao Europcar CPT (1200314811)","Acesso Nomad Lounge GRU (Fernanda)"];
+  buildList(docsList, "ld1", "doc3", function(d,t){ updateBar("bp1","bd1","pt1",d,t,"Tudo pronto!"); });
+  lists.forEach(function(l){ buildList(l.items, l.id, l.key, updateTotal); });
+  updateTotal();
+}
+function buildList(items, cid, key, cb) {
+  var el = document.getElementById(cid); if (!el) return;
+  var s = JSON.parse(localStorage.getItem(key) || "[]");
+  el.innerHTML = "";
+  items.forEach(function(item, i) {
+    var done = s.indexOf(i) > -1;
+    var div = document.createElement("div");
+    div.className = "ci" + (done ? " done" : "");
+    div.innerHTML = "<div class='ck'></div><div class='cl'>" + item + "</div>";
+    div.addEventListener("click", function() {
+      var s2 = JSON.parse(localStorage.getItem(key) || "[]");
+      var idx = s2.indexOf(i);
+      if (idx > -1) s2.splice(idx, 1); else s2.push(i);
+      localStorage.setItem(key, JSON.stringify(s2));
+      buildList(items, cid, key, cb);
+      if (cb) cb();
+    });
+    el.appendChild(div);
+  });
+  if (cb) cb();
+}
+function updateBar(bpid, bdid, ptid, done, total, completeMsg) {
+  var pct = total > 0 ? Math.round(done/total*100) : 0;
+  var bp = document.getElementById(bpid); if (bp) bp.style.width = pct + "%";
+  var bd = document.getElementById(bdid); if (bd) bd.textContent = done + "/" + total;
+  var pt = document.getElementById(ptid); if (pt) pt.textContent = pct === 100 ? (completeMsg || "Completo!") : done + " de " + total + " itens (" + pct + "%)";
+}
+function updateTotal() {
+  var keys = ["af3","me3","rof3","rog3","hif3","hig3","el3","ou3"];
+  var counts = [9,14,19,15,21,11,8,14];
+  var total = 0, done = 0;
+  keys.forEach(function(k,i){ total += counts[i]; done += JSON.parse(localStorage.getItem(k)||"[]").length; });
+  updateBar("bpt","bdt","ptt",done,total,"Mala completa!");
+}
+</script>
+<div class="app">
+<div class="hero">
+  <div class="hbadge">&#10022; Fernanda &amp; Gustavo &#10022;</div>
+  <h1>Africa do <em>Sul</em></h1>
+  <p class="hsub">Lua de mel &middot; 14 a 29 de maio de 2026</p>
+  <div class="hpills"><div class="hpill">15 dias</div><div class="hpill">Joburg &middot; Kruger &middot; Cape Town</div><div class="hpill">Stellenbosch &middot; Franschhoek</div></div>
+  <div class="hcount"><span id="cdn">--</span>dias para a partida</div>
+</div>
+
+<!-- DOCS -->
+<div id="sec-docs" class="sec active">
+<p class="sh">Passagens</p>
+<div class="card">
+  <a class="db" href="https://drive.google.com/file/d/1MewgIpkMhd4DrELoeU9jJo0vW7kvDUXL/view?usp=sharing" target="_blank">&#9992; LATAM LA8058/LA8059 - GRU &harr; JNB (JZZMFZ)</a>
+  <a class="db" href="https://drive.google.com/file/d/1xo8XHDkkKobGKOPnpJaKBJqREzlVsG55/view?usp=sharing" target="_blank">&#9992; Airlink - Fernanda (JNB &harr; CPT)</a>
+  <a class="db" href="https://drive.google.com/file/d/1xU19_sqIRbDRAtfH8cwSbi_cqwpHs0Eu/view?usp=sharing" target="_blank">&#9992; Airlink - Gustavo (JNB &harr; CPT)</a>
+</div>
+<p class="sh">Hospedagens</p>
+<div class="card">
+  <a class="db" href="https://drive.google.com/file/d/1z1xkDt_qvA0CeoPGjF3eCApFJ9bWD6XD/view?usp=sharing" target="_blank">&#127968; Airbnb Johannesburg &middot; Sandton</a>
+  <a class="db" href="https://drive.google.com/file/d/1srifDFsx6qtP6nMhAE5R-3LtA_5lga2f/view?usp=sharing" target="_blank">&#127957; Gem In The Bush Lodge &middot; Hoedspruit</a>
+  <a class="db" href="https://drive.google.com/file/d/1BsqS483L1Ifeui9BzBn-u-Zj42EJW-jQ/view?usp=sharing" target="_blank">&#129409; MILIMA Big 5 Safari Lodge</a>
+  <a class="db" href="https://drive.google.com/file/d/1UPgjTPSGRazu9TNzggObHyHhLTE-l-_9/view?usp=sharing" target="_blank">&#9989; Comprovante pagamento MILIMA</a>
+  <a class="db" href="https://drive.google.com/file/d/1e4APJSd2UxmMsNY8FSxYTF7YhXhRz8Vp/view?usp=sharing" target="_blank">&#127957; Satara Rest Camp &middot; Kruger</a>
+  <a class="db" href="https://drive.google.com/file/d/1PrfQRcR8PWRT1RInJcuqBlZWHKmG7HtA/view?usp=sharing" target="_blank">&#127968; Airbnb Cape Town 1 &middot; Loop Street</a>
+  <a class="db" href="https://drive.google.com/file/d/1ZyvvxWc3S4pdvxPGwsuW6kUK5yGtOjRm/view?usp=sharing" target="_blank">&#127863; Van der Stel Manor &middot; Stellenbosch</a>
+  <a class="db" href="https://drive.google.com/file/d/1GrL_-EG8Sr98q2d3uMbRtdtaP4_nSbO8/view?usp=sharing" target="_blank">&#127969; Auberge Clermont &middot; Franschhoek</a>
+  <a class="db" href="https://drive.google.com/file/d/1P2WuUma9SAQRD6IapiqDdLQVUMsTsXJ3/view?usp=sharing" target="_blank">&#127968; Airbnb Cape Town 2 &middot; Lion Street</a>
+</div>
+<p class="sh">Carros &middot; Restaurantes &middot; Saude</p>
+<div class="card">
+  <a class="db" href="https://drive.google.com/file/d/14MPwQLxLxEkoTsSZHB2ZdL_as-vTBX7-/view?usp=sharing" target="_blank">&#128663; Europcar Johannesburg (1200314755)</a>
+  <a class="db" href="https://drive.google.com/file/d/16wLPYNw_ztfw7HRJxWzEkWBNse3iuZsT/view?usp=sharing" target="_blank">&#128663; Europcar Cape Town (1200314811)</a>
+  <a class="db" href="https://drive.google.com/file/d/1JzeWwze6OMbQFe1DPc_Zg6tRLlBnbHBf/view?usp=sharing" target="_blank">&#127863; Tokara Fine Dining &middot; reserva</a>
+  <a class="db" href="https://drive.google.com/file/d/18NUPyUYaeyf10N1qLVExeCe13VkR63fF/view?usp=sharing" target="_blank">&#129345; GOLD Restaurant &middot; reserva</a>
+  <a class="db" href="https://drive.google.com/file/d/1XfGfw0LwG6ibViQCAhB8VZ_bxzHms6n7/view?usp=sharing" target="_blank">&#128137; Febre Amarela &middot; Fernanda</a>
+  <a class="db" href="https://drive.google.com/file/d/1SVQSJS0-euFnVcUBGqKOlRY1lfWpjwXo/view?usp=sharing" target="_blank">&#128137; Febre Amarela &middot; Gustavo</a>
+  <a class="db" href="https://drive.google.com/file/d/1xDk2zY207wzyotf_Ng5fn7FkFvL3PVb9/view?usp=sharing" target="_blank">&#127713; Nomad Lounge GRU &middot; 1 acesso (Fernanda)</a>
+</div>
+<p class="sh">Checklist de documentos</p>
+<div class="card">
+  <div class="ch"><div class="ct">Antes de sair de casa</div><div class="badge bm" id="bd1">0/12</div></div>
+  <div id="ld1"></div>
+  <div class="pw"><div class="pb0"><div class="pb1" id="bp1" style="width:0%"></div></div><div class="px" id="pt1">Marque conforme separar</div></div>
+</div>
+</div>
+
+<!-- MALA -->
+<div id="sec-mala" class="sec">
+<div class="card"><div class="ch"><div class="ct">Progresso geral</div><div class="badge bm" id="bdt">0/0</div></div><div class="pw"><div class="pb0"><div class="pb1" id="bpt" style="width:0%"></div></div><div class="px" id="ptt">Marque os itens conforme separar</div></div></div>
+<div class="card"><div class="ch2">&#127757; Africa do Sul - especifico (ambos)</div><div id="ld-af"></div></div>
+<div class="card"><div class="ch2">&#128138; Remedios e saude (ambos)</div><div id="ld-me"></div></div>
+<div class="card"><div class="ch2">&#128248; Roupas - Fernanda</div><div id="ld-rof"></div></div>
+<div class="card"><div class="ch2">&#128084; Roupas - Gustavo</div><div id="ld-rog"></div></div>
+<div class="card"><div class="ch2">&#129529; Higiene - Fernanda</div><div id="ld-hif"></div></div>
+<div class="card"><div class="ch2">&#129532; Higiene - Gustavo</div><div id="ld-hig"></div></div>
+<div class="card"><div class="ch2">&#128268; Eletronicos (ambos)</div><div id="ld-el"></div></div>
+<div class="card"><div class="ch2">&#127920; Outros essenciais (ambos)</div><div id="ld-ou"></div></div>
+</div>
+
+<!-- ROTEIRO -->
+<div id="sec-crono" class="sec">
+<div class="dc"><div class="dn">Dia 1 &middot; Qui 14 mai</div><div class="dt">Partida - Sao Paulo</div><div class="ds">GRU &rarr; Johannesburg &middot; voo noturno</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">22h45</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">LATAM LA8058 &middot; GRU &rarr; JNB</div><div class="tx">Reserva JZZMFZ &middot; mala 23kg + item pessoal 10kg<br>Nomad Lounge disponivel no GRU!</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td"></div></div><div class="tc"><div class="tt">Voo ~10h &middot; chegada 15/mai 12h15</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1MewgIpkMhd4DrELoeU9jJo0vW7kvDUXL/view?usp=sharing" target="_blank">&#128196; Passagem LATAM</a><a class="di" href="https://drive.google.com/file/d/1xDk2zY207wzyotf_Ng5fn7FkFvL3PVb9/view?usp=sharing" target="_blank">&#127713; Nomad Lounge</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 2 &middot; Sex 15 mai</div><div class="dt">Johannesburg</div><div class="ds">Chegada &middot; Sandton &middot; Mandela Square</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">12h15</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Chegada JNB &middot; Retirar Europcar</div><div class="tx">Reserva 1200314755 &middot; Toyota Starlet &middot; ate 21/mai 16h30</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">14h+</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-in Airbnb Sandton</div><div class="tx">24 Fredman Drive, The Lineal &middot; Cod HMWDDDSZFM &middot; pago 100%</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Ellis Park &middot; Sandton City &middot; Checkers Hyper</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td"></div></div><div class="tc"><div class="tt">Nelson Mandela Square - jantar</div><div class="tx">Trumps Grillhouse &middot; TANG &middot; La Parada &middot; The Butcher</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1z1xkDt_qvA0CeoPGjF3eCApFJ9bWD6XD/view?usp=sharing" target="_blank">&#127968; Airbnb JHB</a><a class="di" href="https://drive.google.com/file/d/14MPwQLxLxEkoTsSZHB2ZdL_as-vTBX7-/view?usp=sharing" target="_blank">&#128663; Carro JHB</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 3 &middot; Sab 16 mai</div><div class="dt">Johannesburg</div><div class="ds">Apartheid Museum &middot; Soweto &middot; Rosebank</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Museu do Apartheid</div><div class="tx">Northern Parkway &middot; ZAR 170/pessoa &middot; 2-3h</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Mandela's House &middot; Soweto</div><div class="tx">8115 Vilakazi St &middot; ZAR ~80/pessoa &middot; so cartao</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Rosebank Mall + Art &amp; Craft Market</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td"></div></div><div class="tc"><div class="tt">Jantar em Rosebank</div><div class="tx">MAMASAMBA &middot; PROUD MARY</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 4 &middot; Dom 17 mai</div><div class="dt">Rota Panoramica</div><div class="ds">Mac Mac Falls &middot; God's Window &middot; Three Rondavels &rarr; Hoedspruit</div></div>
+<div class="card">
+  <div class="al"><strong>Devolucao carro JHB: 21/mai ate 16h30</strong>Este carro vai ate Hoedspruit e depois para JNB no dia 21.</div>
+  <div class="ti"><div class="tl"><div class="tm">07h00</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Saida &middot; Sabie Brewing Co.</div><div class="tx">N12 &rarr; N4 &rarr; R540 &rarr; Lydenburg &rarr; R36 &rarr; R532</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Mac Mac Falls</div><div class="tx">Cachoeira dupla 65m &middot; arco-iris quase todo dia</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">almoco</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Divine Foods At The View</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">God's Window</div><div class="tx">Penhascos 700-900m &middot; da pra ver o Kruger!</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Bourke's Luck Potholes</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">por sol</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Three Rondavels &middot; Blyde River Canyon</div><div class="tx">3 rochas 700m &middot; 3o maior canion do mundo &middot; por do sol EPICO</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Gem In The Bush Lodge</div><div class="tx">Cod 6247.842.326 &middot; PIN 5222 &middot; ZAR 2.106 no local</div><div class="tg tgr">Pagamento no local!</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1srifDFsx6qtP6nMhAE5R-3LtA_5lga2f/view?usp=sharing" target="_blank">&#128196; Reserva Gem</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 5 &middot; Seg 18 mai</div><div class="dt">MILIMA Safari Lodge</div><div class="ds">Maseke Game Reserve &middot; Big 5 &middot; All-inclusive</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">ate 10h</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Gem &middot; pagar ZAR 2.106</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">13h-14h</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-in MILIMA Big 5 Safari Lodge</div><div class="tx">Archie Farm, Maseke Game Reserve<br>Cod 5220.867.961 &middot; PIN 8513 &middot; GPS S024 8.420 E30 56.167<br>Tenda luxo &middot; All-inclusive &middot; PAGO 100%</div><div class="tg tgy">Lua de mel + alergia pimenta/camarao informados</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td s"></div></div><div class="tc"><div class="tt">Safari noturno &#129409;</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1BsqS483L1Ifeui9BzBn-u-Zj42EJW-jQ/view?usp=sharing" target="_blank">&#128196; Reserva MILIMA</a><a class="di" href="https://drive.google.com/file/d/1UPgjTPSGRazu9TNzggObHyHhLTE-l-_9/view?usp=sharing" target="_blank">&#9989; Pagto MILIMA</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 6 &middot; Ter 19 mai</div><div class="dt">MILIMA - Dia livre</div><div class="ds">Safari manha &middot; descanso &middot; safari noite</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Safari manha &#127749;</div><div class="tx">All-inclusive &middot; todas refeicoes e bebidas incluidas</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Dia livre no lodge &middot; piscina &middot; descanso</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td s"></div></div><div class="tc"><div class="tt">Safari noturno &#127761;</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 7 &middot; Qua 20 mai</div><div class="dt">Kruger - Self Drive</div><div class="ds">MILIMA &rarr; Orpen Gate &rarr; Satara Rest Camp</div></div>
+<div class="card">
+  <div class="alr"><strong>&#9888; Check-out MILIMA: 07h-11h &middot; Portao Kruger fecha 17h30!</strong>Taxa conservacao: ZAR 134/adulto/dia</div>
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Ultimo safari MILIMA + cafe da manha</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">Orpen</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Entrada Kruger - Orpen Gate</div><div class="tx">H7 &rarr; Rabelais &rarr; Bobbejaan &rarr; Satara<br>GPS: -24.392580 S, 31.779530 E &middot; Max 50km/h &middot; NUNCA sair do carro</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">14h00</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Satara Rest Camp</div><div class="tx">Reserva RR386984 &middot; Client Code CAPE0264 &middot; PAGO 100%</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1e4APJSd2UxmMsNY8FSxYTF7YhXhRz8Vp/view?usp=sharing" target="_blank">&#128196; Reserva Satara</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 8 &middot; Qui 21 mai</div><div class="dt">Satara &rarr; JNB &rarr; Cape Town</div><div class="ds">~6h30 carro + devolver + dois voos</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">ate 10h</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Satara &rarr; JNB</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">16h30</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Devolver Europcar JNB &middot; Res. 1200314755</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">20h35</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Airlink 4Z937 &middot; JNB &rarr; CPT</div><div class="tx">Gustavo: 08C &middot; Fernanda: 08A &middot; Chegada 22h50</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">22h30</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Retirar Europcar CPT &middot; Res. 1200314811</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">23h+</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Airbnb Loop Street</div><div class="tx">220 Loop St Apto 307 &middot; Cod HMJ2DQS9T9<br>Michelle +27 76 638 4405 &middot; pago 100%</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1xo8XHDkkKobGKOPnpJaKBJqREzlVsG55/view?usp=sharing" target="_blank">&#9992; Airlink F</a><a class="di" href="https://drive.google.com/file/d/1xU19_sqIRbDRAtfH8cwSbi_cqwpHs0Eu/view?usp=sharing" target="_blank">&#9992; Airlink G</a><a class="di" href="https://drive.google.com/file/d/1PrfQRcR8PWRT1RInJcuqBlZWHKmG7HtA/view?usp=sharing" target="_blank">&#127968; Airbnb CPT1</a><a class="di" href="https://drive.google.com/file/d/16wLPYNw_ztfw7HRJxWzEkWBNse3iuZsT/view?usp=sharing" target="_blank">&#128663; Carro CPT</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 9 &middot; Sex 22 mai</div><div class="dt">Cape Town</div><div class="ds">Table Mountain &middot; Bo-Kaap &middot; V&A Waterfront</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Table Mountain</div><div class="tx">Comprar tickets online antes - lota nos fins de semana!</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Bo-Kaap &middot; Long Street &middot; Truth Coffee</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td"></div></div><div class="tc"><div class="tt">V&amp;A Waterfront</div><div class="tx">Den Anker &middot; Time Out Market &middot; Tiger's Milk</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 10 &middot; Sab 23 mai</div><div class="dt">Peninsula do Cabo</div><div class="ds">Pinguins &middot; Cape Point &middot; Chapman's Peak Drive</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Muizenberg Beach</div><div class="tx">Casinhas coloridas &middot; Empire Cafe para cafe da manha</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Boulders Beach - Pinguins! &#128039;</div><div class="tx">Simon's Town &middot; ZAR ~180/pessoa &middot; The Lighthouse Cafe</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Cape Point &middot; Cabo da Boa Esperanca</div><div class="tx">ZAR 515/adulto estrangeiro + funicular ZAR 115<br>Fish on the Rocks &middot; Mariner's Wharf</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">retorno</div><div class="td s"></div></div><div class="tc"><div class="tt">Chapman's Peak Drive &#128739;</div><div class="tx">9km &middot; 114 curvas &middot; pedagio ZAR ~50 &middot; nao alimente babuinos!</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 11 &middot; Dom 24 mai</div><div class="dt">Stellenbosch</div><div class="ds">Tokara almoco &middot; vinhos &middot; Van der Stel Manor</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">10h00</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Loop Street</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">12h00</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Almoco Tokara Fine Dining &#127863;</div><div class="tx">Ref CC3676948 &middot; deposito ZAR 610 pago &middot; saldo a pagar no local!</div><div class="tg tgr">Saldo a pagar no restaurante</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Rota dos Vinhos Stellenbosch</div><div class="tx">Lanzerac &middot; Delaire Graff &middot; Rust en Vrede</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">14h-18h</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Van der Stel Manor</div><div class="tx">Cod 6891.996.947 &middot; PIN 9213 &middot; +27 71 315 9631<br>ZAR 2.762 &middot; transferencia bancaria!</div><div class="tg tgr">Aguardar e-mail com instrucoes de transferencia</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1JzeWwze6OMbQFe1DPc_Zg6tRLlBnbHBf/view?usp=sharing" target="_blank">&#128196; Tokara</a><a class="di" href="https://drive.google.com/file/d/1ZyvvxWc3S4pdvxPGwsuW6kUK5yGtOjRm/view?usp=sharing" target="_blank">&#128196; Van der Stel</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 12 &middot; Seg 25 mai</div><div class="dt">Franschhoek</div><div class="ds">Wine Tram &middot; Haute Cabriere &middot; Auberge Clermont</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Van der Stel (ate 10h)</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">dia todo</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Franschhoek Wine Tram &#128651;</div><div class="tx">Boschendal &middot; Haute Cabriere (sabre!) &middot; La Motte &middot; Leeu Passant<br>La Petite Colombe &middot; Franks Corner Bar</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">14h-19h</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Auberge Clermont</div><div class="tx">Cod 5245.861.282 &middot; PIN 7662 &middot; +27 21 876 3700<br>ZAR 2.332 no local</div><div class="tg tgr">Ter ZAR 2.332 no Nomad!</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1GrL_-EG8Sr98q2d3uMbRtdtaP4_nSbO8/view?usp=sharing" target="_blank">&#128196; Auberge Clermont</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 13 &middot; Ter 26 mai</div><div class="dt">Cape Town</div><div class="ds">Kirstenbosch &middot; Sea Point &middot; Lion Street</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Auberge (ate 10h30)</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Kirstenbosch Botanical Garden &#127807;</div><div class="tx">ZAR 250/adulto &middot; 08h-18h (inverno)</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Sea Point Promenade &middot; Camps Bay</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">15h00</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Airbnb 40 Lion Street</div><div class="tx">Cod HM5T3WYEMK &middot; Julie +44 7868 818417 &middot; pago 100%</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1P2WuUma9SAQRD6IapiqDdLQVUMsTsXJ3/view?usp=sharing" target="_blank">&#127968; Airbnb Lion St</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 14 &middot; Qua 27 mai</div><div class="dt">Cape Town</div><div class="ds">Robben Island &middot; Signal Hill &middot; Camps Bay</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Robben Island &#127965;</div><div class="tx">Ferry V&amp;A Waterfront &middot; tour ~3h &middot; RESERVAR JA - esgota semanas antes!</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div></div><div class="tc"><div class="tt">Signal Hill &middot; Camps Bay</div><div class="tx">Codfather &middot; The Bungalow &middot; Cafe Caprice &middot; Tiger's Milk</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 15 &middot; Qui 28 mai</div><div class="dt">Cape Town - jantar especial</div><div class="ds">V&amp;A Waterfront &middot; GOLD Restaurant 18h30</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">dia</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">V&amp;A Waterfront</div><div class="tx">Mojo Market &middot; Willoughby &middot; Tiger's Milk &middot; Watershed</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">18h30</div><div class="td s"></div></div><div class="tc"><div class="tt">GOLD Restaurant &#129345;</div><div class="tx">15 Bennett St, Green Point &middot; Ref CC3693825<br>Djembe drumming 18h30 &rarr; banquete 14 pratos &middot; dep. ZAR 510 pago</div><div class="tg tgr">Saldo a pagar no restaurante</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/18NUPyUYaeyf10N1qLVExeCe13VkR63fF/view?usp=sharing" target="_blank">&#128196; Reserva GOLD</a></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 16 &middot; Sex 29 mai</div><div class="dt">Retorno - Sao Paulo</div><div class="ds">CPT &rarr; JNB &rarr; GRU</div></div>
+<div class="card">
+  <div class="ti"><div class="tl"><div class="tm">04h00</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Devolver Europcar CPT &middot; Res. 1200314811</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">07h00</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Airlink 4Z920 &middot; CPT &rarr; JNB</div><div class="tx">Gustavo: 05F &middot; Fernanda: 05D &middot; Chegada 09h05</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">14h50</div><div class="td s"></div></div><div class="tc"><div class="tt">LATAM LA8059 &middot; JNB &rarr; GRU</div><div class="tx">Chegada Sao Paulo 20h20 &middot; Reserva JZZMFZ</div></div></div>
+  <div class="dr"><a class="di" href="https://drive.google.com/file/d/1xo8XHDkkKobGKOPnpJaKBJqREzlVsG55/view?usp=sharing" target="_blank">&#9992; Airlink F</a><a class="di" href="https://drive.google.com/file/d/1xU19_sqIRbDRAtfH8cwSbi_cqwpHs0Eu/view?usp=sharing" target="_blank">&#9992; Airlink G</a><a class="di" href="https://drive.google.com/file/d/1MewgIpkMhd4DrELoeU9jJo0vW7kvDUXL/view?usp=sharing" target="_blank">&#9992; LATAM volta</a></div>
+</div>
+</div>
+
+<!-- LUGARES -->
+<div id="sec-lugares" class="sec">
+<div class="dc"><div class="dn">Dia 2 &middot; Sex 15 mai</div><div class="dt">Johannesburg</div><div class="ds">Sandton &middot; Ellis Park &middot; Mandela Square</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb Sandton</div><div class="pa">24 Fredman Drive, The Lineal, Sandton 2031</div><div class="pp">15-17 mai &middot; Cod HMWDDDSZFM &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1z1xkDt_qvA0CeoPGjF3eCApFJ9bWD6XD/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127967;</div><div><div class="pn">Ellis Park Stadium</div><div class="pa">Doornfontein &middot; historico estadio Copa 2010 &middot; visita externa</div></div></div>
+  <div class="pi"><div class="pic">&#128722;</div><div><div class="pn">Nelson Mandela Square</div><div class="pa">Sandton Drive &middot; estatua 6m do Mandela</div><div class="pd">Praca luxuosa com estatua de Mandela. Otimo para jantar ao ar livre.<br><strong style="color:var(--gol)">Trumps Grillhouse</strong> &mdash; cortes premiados de carne; <strong style="color:var(--gol)">TANG</strong> &mdash; asiatico sofisticado; <strong style="color:var(--gol)">La Parada</strong> &mdash; tapas espanholas; <strong style="color:var(--gol)">The Butcher Shop</strong> &mdash; classico de carnes nobres.</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 3 &middot; Sab 16 mai</div><div class="dt">Johannesburg</div><div class="ds">Apartheid Museum &middot; Soweto &middot; Rosebank</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127963;</div><div><div class="pn">Museu do Apartheid</div><div class="pa">Northern Parkway &middot; ZAR 170/pessoa &middot; 2-3h</div><div class="pd">Um dos museus mais poderosos do mundo. Ao entrar cada visitante recebe ingresso "branco" ou "nao-branco" aleatoriamente.</div><div class="dr"><a class="di" href="https://www.webtickets.co.za/v2/event.aspx?itemid=681080" target="_blank">&#127915; Comprar tickets</a></div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Mandela's House &middot; Soweto</div><div class="pa">8115 Vilakazi Street, Orlando West &middot; ZAR ~80/pessoa</div><div class="pd">Casa onde Mandela viveu antes de ser preso. So cartao (cashless desde dez/2025). Unica rua do mundo com dois Nobel.</div><div class="dr"><a class="di" href="https://www.mandelahouse.com/" target="_blank">&#127758; Site oficial</a></div></div></div>
+  <div class="pi"><div class="pic">&#127912;</div><div><div class="pn">Rosebank Mall + Art &amp; Craft Market</div><div class="pa">Bath Ave, Rosebank &middot; mercado de artesanato no terraco</div><div class="pd">Mercado de artesanato africano unico no terraço do mall &mdash; otimo para lembranças autenticas. Para jantar: <strong style="color:var(--gol)">MAMASAMBA</strong> &mdash; vibrante, cozinha latinoafricana com dj; <strong style="color:var(--gol)">PROUD MARY</strong> &mdash; moderno, menu criativo e drinques fantasticos.</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 4 &middot; Dom 17 mai</div><div class="dt">Rota Panoramica</div><div class="ds">Mac Mac Falls &middot; God's Window &middot; Three Rondavels &rarr; Hoedspruit</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">Mac Mac Falls</div><div class="pa">R532, 13km de Sabie &middot; pequena taxa</div><div class="pd">Cachoeira dupla de 65m criada por mineradores escoceses com dinamite no sec. XIX. Arco-iris quase todo dia.</div></div></div>
+  <div class="pi"><div class="pic">&#129695;</div><div><div class="pn">God's Window</div><div class="pa">Blyde River Canyon Reserve &middot; ~ZAR 180/pessoa</div><div class="pd">Penhascos caem 700-900m para o Lowveld. Em dia claro da para ver o Kruger!</div></div></div>
+  <div class="pi"><div class="pic">&#127744;</div><div><div class="pn">Bourke's Luck Potholes</div><div class="pa">Confluencia rios Blyde e Treur &middot; ~ZAR 180</div><div class="pd">Formacoes cilindricas esculpidas por milenios de redemoinhos.</div></div></div>
+  <div class="pi"><div class="pic">&#127956;</div><div><div class="pn">Three Rondavels &middot; Blyde River Canyon</div><div class="pa">Panorama Route &middot; 3o maior canion do mundo</div><div class="pd">Tres rochas de 700m que imitam cabanas africanas. Por do sol epico.</div></div></div>
+  <div class="pi"><div class="pic">&#127957;</div><div><div class="pn">Gem In The Bush Lodge</div><div class="pa">682 Kierieklapper St, Hoedspruit &middot; +27 72 975 2843</div><div class="pp">17-18 mai &middot; PIN 5222 &middot; ZAR 2.106 no local</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1srifDFsx6qtP6nMhAE5R-3LtA_5lga2f/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dias 5 e 6 &middot; 18-19 mai</div><div class="dt">MILIMA Safari Lodge</div><div class="ds">Maseke Game Reserve &middot; Big 5 &middot; All-inclusive</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#129409;</div><div><div class="pn">MILIMA Big 5 Safari Lodge</div><div class="pa">Archie Farm, Maseke Game Reserve &middot; +27 15 793 7900</div><div class="pd">Lodge de luxo. All-inclusive com safaris manha e noite. Big 5 garantido. Lua de mel + alergias informados.</div><div class="pp">18-20 mai &middot; GPS S024 8.420 E30 56.167 &middot; PAGO 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1BsqS483L1Ifeui9BzBn-u-Zj42EJW-jQ/view?usp=sharing" target="_blank">&#128196; Reserva</a><a class="di" href="https://drive.google.com/file/d/1UPgjTPSGRazu9TNzggObHyHhLTE-l-_9/view?usp=sharing" target="_blank">&#9989; Pagamento</a></div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 7 &middot; Qua 20 mai</div><div class="dt">Kruger - Self Drive</div><div class="ds">Orpen Gate &rarr; H7 &rarr; Satara</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#129362;</div><div><div class="pn">Kruger National Park</div><div class="pa">Orpen Gate &rarr; H7 &rarr; Rabelais &rarr; Bobbejaan &rarr; Satara</div><div class="pd">Max 50km/h. NUNCA sair do carro. Portao fecha 17h30 em maio!</div></div></div>
+  <div class="pi"><div class="pic">&#127957;</div><div><div class="pn">Satara Rest Camp</div><div class="pa">Kruger National Park &middot; GPS -24.392580, 31.779530</div><div class="pp">20-21 mai &middot; Reserva RR386984 &middot; PAGO 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1e4APJSd2UxmMsNY8FSxYTF7YhXhRz8Vp/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 9 &middot; Sex 22 mai</div><div class="dt">Cape Town</div><div class="ds">Table Mountain &middot; Bo-Kaap &middot; V&A Waterfront</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb 220 Loop Street Apto 307</div><div class="pa">Cape Town City Centre &middot; Michelle +27 76 638 4405</div><div class="pp">21-24 mai &middot; Cod HMJ2DQS9T9 &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1PrfQRcR8PWRT1RInJcuqBlZWHKmG7HtA/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127956;</div><div><div class="pn">Table Mountain</div><div class="pa">Tafelberg Rd &middot; comprar tickets online - lota!</div><div class="pd">600M anos de idade. Uma das Novas 7 Maravilhas da Natureza. Telefererico rotativo vista 360.</div><div class="dr"><a class="di" href="https://www.tablemountain.net/plan-your-visit/buy-tickets" target="_blank">&#127915; Comprar tickets</a></div></div></div>
+  <div class="pi"><div class="pic">&#127912;</div><div><div class="pn">Bo-Kaap &middot; Long Street &middot; Truth Coffee</div><div class="pa">Signal Hill, Cape Town</div><div class="pd">Bairro historico Malaio-Cape com casinhas coloridas. Truth Coffee: eleito melhor cafe do mundo.</div></div></div>
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront</div><div class="pa">Victoria &amp; Alfred Waterfront, Cape Town</div><div class="pd">Porto historico transformado em complexo de lazer com vista para a Table Mountain. <strong style="color:var(--gol)">Den Anker</strong> &mdash; frutos do mar belgas com vista ao mar; <strong style="color:var(--gol)">Time Out Market</strong> &mdash; mercado gastronômico com o melhor de CPT; <strong style="color:var(--gol)">Tiger's Milk</strong> &mdash; hamburguers e batatas fritas classicos; <strong style="color:var(--gol)">Truth Coffee</strong> &mdash; eleito melhor cafe do mundo, decoracao steampunk incrivel.</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 10 &middot; Sab 23 mai</div><div class="dt">Peninsula do Cabo</div><div class="ds">Muizenberg &middot; Pinguins &middot; Cape Point &middot; Chapman's Peak</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Muizenberg Beach</div><div class="pa">Beach Road, Muizenberg</div><div class="pd">Casinhas de praia coloridas iconicas. Berco do surf sul-africano. Empire Cafe para cafe da manha.</div></div></div>
+  <div class="pi"><div class="pic">&#128039;</div><div><div class="pn">Boulders Beach - Pinguins!</div><div class="pa">Simon's Town &middot; ZAR ~180/pessoa</div><div class="pd">Colonia de pinguins africanos em extincao. Passarelas entre os ninhos. The Lighthouse Cafe para almoco.</div><div class="dr"><a class="di" href="https://www.sanparks.org/tickets/tickets.php" target="_blank">&#127915; Tickets SANParks</a></div></div></div>
+  <div class="pi"><div class="pic">&#9968;</div><div><div class="pn">Cape Point &middot; Cabo da Boa Esperanca</div><div class="pa">SANParks &middot; ZAR 515/adulto estrangeiro &middot; funicular +ZAR 115</div><div class="pd">Ponta mais sudoeste da Africa. Atlantico encontra o Indico. Farol historico. Baboons pelo caminho!</div><div class="dr"><a class="di" href="https://www.sanparks.org/tickets/tickets.php" target="_blank">&#127915; Tickets SANParks</a><a class="di" href="https://capepoint.co.za/visitus/" target="_blank">&#8505; Info precos</a></div></div></div>
+  <div class="pi"><div class="pic">&#127739;</div><div><div class="pn">Chapman's Peak Drive</div><div class="pa">Hout Bay &rarr; Noordhoek &middot; pedagio ~ZAR 50</div><div class="pd">9km com 114 curvas entre penhascos e o Atlantico. Uma das mais belas estradas do mundo. Para na saida: <strong style="color:var(--gol)">Fish on the Rocks</strong> (Hout Bay) &mdash; peixe e camarao frescassimo direto do porto, comida na pedra; <strong style="color:var(--gol)">Mariner's Wharf</strong> &mdash; classico de frutos do mar em Hout Bay. Nao alimente os babuinos!</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 11 &middot; Dom 24 mai</div><div class="dt">Stellenbosch</div><div class="ds">Tokara almoco &middot; vinhos &middot; Van der Stel Manor</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">Tokara Fine Dining</div><div class="pa">Helshoogte Pass &middot; +27 21 885 2550 &middot; 12h00</div><div class="pd">Restaurante de fine dining de uma das vinicolas mais premiadas de Stellenbosch. Vista espetacular para os vinhedos e o vale. Menu sazonal com ingredientes locais. <strong style="color:#e88aaa">Deposito ZAR 610 pago &mdash; saldo a pagar no local!</strong></div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1JzeWwze6OMbQFe1DPc_Zg6tRLlBnbHBf/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">Rota dos Vinhos &middot; Stellenbosch</div><div class="pa">Lanzerac &middot; Delaire Graff &middot; Rust en Vrede</div><div class="pd"><strong style="color:var(--gol)">Lanzerac</strong> &mdash; uma das vinicolas mais antigas (1692), arquitetura Cape Dutch historica; <strong style="color:var(--gol)">Delaire Graff</strong> &mdash; galeria de arte + restaurante premiado, vista incrivel para as montanhas; <strong style="color:var(--gol)">Rust en Vrede</strong> &mdash; cabernets premiados internacionalmente, ambiente intimista.</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Van der Stel Manor</div><div class="pa">64 Van Der Stel Road &middot; +27 71 315 9631</div><div class="pp">24-25 mai &middot; PIN 9213 &middot; ZAR 2.762 por transferencia</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1ZyvvxWc3S4pdvxPGwsuW6kUK5yGtOjRm/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 12 &middot; Seg 25 mai</div><div class="dt">Franschhoek</div><div class="ds">Wine Tram &middot; Haute Cabriere &middot; Auberge Clermont</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#128651;</div><div><div class="pn">Franschhoek Wine Tram</div><div class="pa">Boschendal &middot; Haute Cabriere &middot; La Motte &middot; Leeu Passant</div><div class="pd">Bondinho que percorre o vale parando nas vinicolas. <strong style="color:var(--gol)">Boschendal</strong> &mdash; uma das mais belas, arquitetura Cape Dutch de 1685 e jardins historicos; <strong style="color:var(--gol)">La Motte</strong> &mdash; arte, musica e vinhos excepcionais; <strong style="color:var(--gol)">Leeu Passant</strong> &mdash; boutique de altissimo nivel; <strong style="color:var(--gol)">La Petite Colombe</strong> &mdash; eleito um dos melhores restaurantes da Africa do Sul, fine dining frances com ingredientes locais.</div></div></div>
+  <div class="pi"><div class="pic">&#10024;</div><div><div class="pn">Haute Cabriere - tour especial</div><div class="pa">ZAR 200/pessoa &middot; todo dia as 12h</div><div class="pd">Chegar 10min antes e comprar no balcao da padaria. Inclui historia, sabrage (abertura com sabre!) e degustacao. Tours privados seg-sex 10h-11h30.</div><div class="dr"><a class="di" href="https://mail.google.com/mail/?view=cm&to=reservations@cabriere.co.za" target="_blank">&#128231; reservations@cabriere.co.za</a></div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Auberge Clermont</div><div class="pa">Robertsvlei Road, Franschhoek &middot; +27 21 876 3700</div><div class="pp">25-26 mai &middot; PIN 7662 &middot; ZAR 2.332 no local</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1GrL_-EG8Sr98q2d3uMbRtdtaP4_nSbO8/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 13 &middot; Ter 26 mai</div><div class="dt">Cape Town</div><div class="ds">Kirstenbosch &middot; Sea Point &middot; Lion Street</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127807;</div><div><div class="pn">Kirstenbosch National Botanical Garden</div><div class="pa">Rhodes Drive, Newlands &middot; ZAR 250/adulto &middot; 08h-18h</div><div class="pd">Jardim botanico no sope da Table Mountain. 7.000 plantas nativas. Um dos mais belos do mundo.</div><div class="dr"><a class="di" href="https://www.webtickets.co.za/v2/event.aspx?itemid=649795" target="_blank">&#127915; Comprar tickets</a></div></div></div>
+  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Sea Point Promenade &middot; Camps Bay</div><div class="pa">Passeio a beira-mar com vista para os Doze Apostolos</div><div class="pd">Praia mais glamourosa de Cape Town. <strong style="color:var(--gol)">Codfather</strong> &mdash; frutos do mar fresquissimos escolhidos na pedra; <strong style="color:var(--gol)">The Bungalow</strong> &mdash; coquetel ao por do sol com os pes na areia; <strong style="color:var(--gol)">Cafe Caprice</strong> &mdash; classico boémio de Camps Bay; <strong style="color:var(--gol)">Tiger's Milk</strong> &mdash; vista incrivel, menu casual.</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb 40 Lion Street</div><div class="pa">Cape Town 8001 &middot; Julie +44 7868 818417</div><div class="pp">26-29 mai &middot; Cod HM5T3WYEMK &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1P2WuUma9SAQRD6IapiqDdLQVUMsTsXJ3/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 14 &middot; Qua 27 mai</div><div class="dt">Cape Town</div><div class="ds">Robben Island &middot; Signal Hill &middot; Camps Bay</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127965;</div><div><div class="pn">Robben Island</div><div class="pa">Ferry V&amp;A Waterfront &middot; tour ~3h &middot; RESERVAR JA!</div><div class="pd">Onde Mandela ficou preso 18 anos. Guiado por ex-presos politicos. Esgota semanas antes!</div><div class="dr"><a class="di" href="https://robbenisland.plankton.mobi/" target="_blank">&#127915; Tickets oficiais</a></div></div></div>
+  <div class="pi"><div class="pic">&#9968;</div><div><div class="pn">Signal Hill</div><div class="pa">Signal Hill Road, Cape Town</div><div class="pd">Vista 360 da cidade. Canhao disparado ao meio-dia desde 1806.</div></div></div>
+  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Camps Bay Beach</div><div class="pa">Victoria Road, Camps Bay</div><div class="pd">Praia glamourosa com os Doze Apostolos. Codfather &middot; The Bungalow &middot; Cafe Caprice.</div></div></div>
+</div>
+
+<div class="dc"><div class="dn">Dia 15 &middot; Qui 28 mai</div><div class="dt">Cape Town - jantar especial</div><div class="ds">V&amp;A Waterfront &middot; GOLD Restaurant 18h30</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront &mdash; dia final</div><div class="pa">Cape Town Waterfront</div><div class="pd"><strong style="color:var(--gol)">Mojo Market</strong> &mdash; mercado de rua artesanal com comidas do mundo; <strong style="color:var(--gol)">Willoughby &amp; Co</strong> &mdash; sushi e frutos do mar premiado; <strong style="color:var(--gol)">Watershed</strong> &mdash; design e artesanato local, otimo para lembranças; <strong style="color:var(--gol)">Chad Henning Photography</strong> &mdash; galeria de fotos de safari e vida selvagem africana.</div></div></div>
+  <div class="pi"><div class="pic">&#129345;</div><div><div class="pn">GOLD Restaurant</div><div class="pa">15 Bennett St, Green Point &middot; reservado 18h30</div><div class="pd">Experiencia cultural unica de Cape Town. Começa com djembe drumming africano interativo (18h30), depois banquete pan-africano de 14 pratos representando cozinhas de todo o continente. Guiado por anfitrioes com trajes tradicionais. Um dos jantares mais memoraveis possiveis em Cape Town. <strong style="color:#e88aaa">Deposito ZAR 510 pago &mdash; saldo no local.</strong></div><div class="dr"><a class="di" href="https://drive.google.com/file/d/18NUPyUYaeyf10N1qLVExeCe13VkR63fF/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+</div>
+</div>
+
+<!-- NOMAD -->
+<div id="sec-nomad" class="sec">
+<p class="sh">Nomad - dinheiro para os hoteis</p>
+<div style="font-size:10px;color:var(--ts);margin-bottom:10px;line-height:1.6">Cotacao usada: <strong style="color:var(--gol)">USD 1 = ZAR 17</strong> com +15% de margem. Coloque antes das datas abaixo!</div>
+<div class="nc"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><div><div style="font-size:11px;color:var(--ts);margin-bottom:2px">Gem In The Bush Lodge &middot; Hoedspruit</div><div style="font-family:'Playfair Display',serif;font-size:26px;color:var(--gol)">USD 145</div><div style="font-size:10px;color:var(--ts)">ZAR 2.106 &middot; pagar no local no check-in</div></div><div style="text-align:right;flex-shrink:0;margin-left:8px"><div style="font-size:9px;color:var(--ts);margin-bottom:3px">colocar no Nomad ate</div><div style="background:rgba(220,80,80,.15);color:#e88aaa;font-size:13px;font-weight:500;padding:4px 10px;border-radius:8px;border:1px solid rgba(220,80,80,.2)">25 de abril</div></div></div><div style="background:rgba(255,255,255,.03);border-radius:8px;padding:8px 10px;font-size:10px;color:var(--ts);line-height:1.7">Cancel. gratis ate 25/abr &middot; apos 26/abr cobra ZAR 1.053 &middot; apos 18/mai cobra 100%</div></div>
+<div class="nc"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><div><div style="font-size:11px;color:var(--ts);margin-bottom:2px">Van der Stel Manor &middot; Stellenbosch</div><div style="font-family:'Playfair Display',serif;font-size:26px;color:var(--gol)">USD 188</div><div style="font-size:10px;color:var(--ts)">ZAR 2.762 &middot; transferencia bancaria antes da chegada</div></div><div style="text-align:right;flex-shrink:0;margin-left:8px"><div style="font-size:9px;color:var(--ts);margin-bottom:3px">colocar no Nomad ate</div><div style="background:rgba(220,80,80,.15);color:#e88aaa;font-size:13px;font-weight:500;padding:4px 10px;border-radius:8px;border:1px solid rgba(220,80,80,.2)">23 de abril</div></div></div><div style="background:rgba(255,255,255,.03);border-radius:8px;padding:8px 10px;font-size:10px;color:var(--ts);line-height:1.7">&#9888; Enviam instrucoes por e-mail - fique atenta! &middot; Cancel. gratis ate 23/abr</div></div>
+<div class="nc"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><div><div style="font-size:11px;color:var(--ts);margin-bottom:2px">Auberge Clermont &middot; Franschhoek</div><div style="font-family:'Playfair Display',serif;font-size:26px;color:var(--gol)">USD 158</div><div style="font-size:10px;color:var(--ts)">ZAR 2.332 &middot; pagar no local no check-in</div></div><div style="text-align:right;flex-shrink:0;margin-left:8px"><div style="font-size:9px;color:var(--ts);margin-bottom:3px">colocar no Nomad ate</div><div style="background:rgba(220,80,80,.15);color:#e88aaa;font-size:13px;font-weight:500;padding:4px 10px;border-radius:8px;border:1px solid rgba(220,80,80,.2)">24 de abril</div></div></div><div style="background:rgba(255,255,255,.03);border-radius:8px;padding:8px 10px;font-size:10px;color:var(--ts);line-height:1.7">Sem reembolso apos 25/abr!</div></div>
+<div class="card" style="border-color:rgba(201,150,58,.3)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div style="font-size:11px;color:var(--ts)">Total hoteis + margem</div><div style="font-family:'Playfair Display',serif;font-size:28px;color:var(--gol)">USD 491</div></div><div style="font-size:10px;color:var(--ts);line-height:1.7;margin-bottom:8px">+ Tokara (saldo apos dep. ZAR 610) e GOLD (saldo apos dep. ZAR 510) - pagar no local</div><div style="background:rgba(76,175,133,.08);border-radius:8px;padding:8px 10px;font-size:10px;color:var(--gl)">&#10003; MILIMA &middot; Satara &middot; Airbnbs &middot; Europcar &middot; Passagens - todos ja pagos!</div></div>
+<a class="db" href="https://drive.google.com/file/d/1xDk2zY207wzyotf_Ng5fn7FkFvL3PVb9/view?usp=sharing" target="_blank">&#127713; Nomad Lounge GRU - 1 acesso (Fernanda) - valido ate 31/mai</a>
+</div>
+
+<!-- CARROS -->
+<div id="sec-carro" class="sec">
+<p class="sh">Carro 1 - Johannesburg</p>
+<div class="card">
+  <div class="ch"><div class="ct">Europcar &middot; Johannesburg</div><div class="badge bk">Confirmado</div></div>
+  <div class="ir"><span class="ik">Reserva</span><span class="iv" style="font-family:monospace;color:var(--gol)">1200314755</span></div>
+  <div class="ir"><span class="ik">Veiculo</span><span class="iv">Toyota Starlet 1.4 &middot; Automatico &middot; AC &middot; km ilimitada</span></div>
+  <div class="ir"><span class="ik">Retirada</span><span class="iv">15/mai &middot; 12h00 &middot; Johannesburg Airport</span></div>
+  <div class="ir"><span class="ik">Devolucao</span><span class="iv">21/mai &middot; 16h30 &middot; Johannesburg Airport</span></div>
+  <a class="db" href="https://drive.google.com/file/d/14MPwQLxLxEkoTsSZHB2ZdL_as-vTBX7-/view?usp=sharing" target="_blank">&#128196; Reserva carro JHB</a>
+</div>
+<p class="sh">Carro 2 - Cape Town</p>
+<div class="card">
+  <div class="ch"><div class="ct">Europcar &middot; Cape Town</div><div class="badge bk">Confirmado</div></div>
+  <div class="ir"><span class="ik">Reserva</span><span class="iv" style="font-family:monospace;color:var(--gol)">1200314811</span></div>
+  <div class="ir"><span class="ik">Veiculo</span><span class="iv">Toyota Starlet 1.4 &middot; Automatico &middot; AC &middot; km ilimitada</span></div>
+  <div class="ir"><span class="ik">Retirada</span><span class="iv">21/mai &middot; 22h30 &middot; Cape Town Intl Airport</span></div>
+  <div class="ir"><span class="ik">Devolucao</span><span class="iv">29/mai &middot; 04h00 &middot; Cape Town Intl Airport</span></div>
+  <a class="db" href="https://drive.google.com/file/d/16wLPYNw_ztfw7HRJxWzEkWBNse3iuZsT/view?usp=sharing" target="_blank">&#128196; Reserva carro CPT</a>
+</div>
+<p class="sh">Atencao na estrada</p>
+<div class="card">
+  <div class="tip"><span class="tic">&#9888;</span><span>Direcao pela esquerda - volante do lado direito</span></div>
+  <div class="tip"><span class="tic">&#128196;</span><span>CNH Internacional recomendada (levar junto com a brasileira)</span></div>
+  <div class="tip"><span class="tic">&#9981;</span><span>Abasteca sempre que puder no interior e Kruger - postos sao raros</span></div>
+  <div class="tip"><span class="tic">&#128274;</span><span>Nunca deixe objetos visiveis no carro parado</span></div>
+  <div class="tip"><span class="tic">&#128241;</span><span>Baixe Google Maps offline antes de sair - sem sinal no interior</span></div>
+  <div class="tip"><span class="tic">&#129409;</span><span>Kruger: max 50km/h e NUNCA sair do carro</span></div>
+  <div class="tip"><span class="tic">&#128138;</span><span>Kruger = area endemica de malaria - use repelente e tome profilaxia</span></div>
+  <div class="tip"><span class="tic">&#127476;</span><span>Chapman's Peak: nao alimente babuinos - ficam agressivos</span></div>
+  <div class="tip"><span class="tic">&#127985;</span><span>Kruger: portao fecha 17h30 em maio - nao atrase!</span></div>
+</div>
+</div>
+
+</div><!-- end app -->
+
+<nav class="nav">
+  <button class="nb active" onclick="goTo('docs', this)"><div class="ni">&#128196;</div><span>Docs</span></button>
+  <button class="nb" onclick="goTo('mala', this)"><div class="ni">&#129523;</div><span>Mala</span></button>
+  <button class="nb" onclick="goTo('crono', this)"><div class="ni">&#128197;</div><span>Roteiro</span></button>
+  <button class="nb" onclick="goTo('lugares', this)"><div class="ni">&#127758;</div><span>Lugares</span></button>
+  <button class="nb" onclick="goTo('nomad', this)"><div class="ni">&#128179;</div><span>Nomad</span></button>
+  <button class="nb" onclick="goTo('carro', this)"><div class="ni">&#128663;</div><span>Carros</span></button>
+</nav>
+</body>
+</html>
