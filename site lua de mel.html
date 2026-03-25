@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<link rel="manifest" href="data:application/manifest+json,{
+  %22name%22:%22Lua de Mel - Africa do Sul%22,
+  %22short_name%22:%22Africa do Sul%22,
+  %22start_url%22:%22.%22,
+  %22display%22:%22standalone%22,
+  %22background_color%22:%22%230d1f1a%22,
+  %22theme_color%22:%22%230d1f1a%22,
+  %22icons%22:[{%22src%22:%22data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d1f1a' rx='20'/%3E%3Ctext y='.9em' font-size='80'%3E%F0%9F%A6%81%3C/text%3E%3C/svg%3E%22,%22sizes%22:%22any%22,%22type%22:%22image/svg+xml%22}]
+}">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d1f1a' rx='20'/><text y='.9em' font-size='80'>&#129409;</text></svg>">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Africa do Sul">
 <meta name="apple-mobile-web-app-title" content="Lua de Mel">
 <meta name="theme-color" content="#0d1f1a">
 <meta name="color-scheme" content="dark">
@@ -90,6 +102,15 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
 .alr strong{display:block;margin-bottom:1px;font-size:9px;letter-spacing:.5px;text-transform:uppercase}
 .ch2{font-size:10px;font-weight:500;color:var(--go);letter-spacing:.5px;text-transform:uppercase;padding:8px 0 4px;border-bottom:1px solid rgba(201,150,58,.2);margin-bottom:2px}
 .nc{background:linear-gradient(135deg,rgba(201,150,58,.12),rgba(45,122,90,.08));border:1px solid rgba(201,150,58,.25);border-radius:16px;padding:14px;margin-bottom:9px}
+
+.htitle{font-size:32px;font-weight:700;color:var(--tt);margin:10px 0 4px;letter-spacing:-0.5px}
+.hsub{font-size:13px;color:var(--td);margin:0 0 22px}
+.hcd{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 10px}
+.hcb{display:flex;flex-direction:column;align-items:center;background:rgba(201,150,58,.1);border:1px solid rgba(201,150,58,.25);border-radius:12px;padding:10px 14px;min-width:56px}
+.hcn{font-size:28px;font-weight:700;color:var(--gol);font-variant-numeric:tabular-nums;line-height:1}
+.hcl{font-size:9px;color:var(--td);letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+.hcs{font-size:24px;font-weight:700;color:var(--gol);margin-bottom:14px}
+.hcdl{font-size:12px;color:var(--go);margin:0}
 </style>
 </head>
 <body>
@@ -159,16 +180,31 @@ function updateTotal() {
 }
 </script>
 <div class="app">
+
 <div class="hero">
-  <div class="hbadge">&#10022; Fernanda &amp; Gustavo &#10022;</div>
-  <h1>Africa do <em>Sul</em></h1>
-  <p class="hsub">Lua de mel &middot; 14 a 29 de maio de 2026</p>
-  <div class="hpills"><div class="hpill">15 dias</div><div class="hpill">Joburg &middot; Kruger &middot; Cape Town</div><div class="hpill">Stellenbosch &middot; Franschhoek</div></div>
-  <div class="hcount"><span id="cdn">--</span>dias para a partida</div>
+  <div class="hbadge">&#127487;&#127462;&nbsp;&nbsp;&Aacute;frica do Sul &nbsp;&#127487;&#127462;</div>
+  <h1 class="htitle">Fernanda &amp; Gustavo</h1>
+  <p class="hsub">14 &ndash; 29 de maio de 2026 &middot; 15 dias</p>
+  <div class="hcd">
+    <div class="hcb"><div class="hcn" id="cdn-d">00</div><div class="hcl">dias</div></div>
+    <div class="hcs">:</div>
+    <div class="hcb"><div class="hcn" id="cdn-h">00</div><div class="hcl">horas</div></div>
+    <div class="hcs">:</div>
+    <div class="hcb"><div class="hcn" id="cdn-m">00</div><div class="hcl">min</div></div>
+    <div class="hcs">:</div>
+    <div class="hcb"><div class="hcn" id="cdn-s">00</div><div class="hcl">seg</div></div>
+  </div>
+  <p class="hcdl" id="cdn-msg">at&eacute; a decolagem! &#9992;</p>
 </div>
 
-<!-- DOCS -->
 <div id="sec-docs" class="sec active">
+<p class="sh">Check-in Online &middot; Fazer 48h antes &#9992;</p>
+<div class="card">
+  <a class="db" style="background:rgba(201,150,58,.13);border-color:rgba(201,150,58,.4)" href="https://www.latam.com/pt_br/voos/check-in/" target="_blank">&#9992; LATAM LA8058 &middot; GRU&rarr;JNB &middot; Fazer em 12/mai &agrave;s 22h30</a>
+  <a class="db" style="background:rgba(201,150,58,.13);border-color:rgba(201,150,58,.4)" href="https://www.flyairlink.com/manage-booking/check-in" target="_blank">&#9992; Airlink 4Z937 &middot; JNB&rarr;CPT &middot; Fazer em 19/mai &agrave;s 20h35</a>
+  <a class="db" style="background:rgba(201,150,58,.13);border-color:rgba(201,150,58,.4)" href="https://www.flyairlink.com/manage-booking/check-in" target="_blank">&#9992; Airlink 4Z920 &middot; CPT&rarr;JNB &middot; Fazer em 27/mai &agrave;s 07h00</a>
+  <a class="db" style="background:rgba(201,150,58,.13);border-color:rgba(201,150,58,.4)" href="https://www.latam.com/pt_br/voos/check-in/" target="_blank">&#9992; LATAM LA8059 &middot; JNB&rarr;GRU &middot; Fazer em 27/mai &agrave;s 14h50</a>
+</div>
 <p class="sh">Passagens</p>
 <div class="card">
   <a class="db" href="https://drive.google.com/file/d/1MewgIpkMhd4DrELoeU9jJo0vW7kvDUXL/view?usp=sharing" target="_blank">&#9992; LATAM LA8058/LA8059 - GRU &harr; JNB (JZZMFZ)</a>
@@ -206,6 +242,7 @@ function updateTotal() {
 </div>
 
 <!-- MALA -->
+
 <div id="sec-mala" class="sec">
 <div class="card"><div class="ch"><div class="ct">Progresso geral</div><div class="badge bm" id="bdt">0/0</div></div><div class="pw"><div class="pb0"><div class="pb1" id="bpt" style="width:0%"></div></div><div class="px" id="ptt">Marque os itens conforme separar</div></div></div>
 <div class="card"><div class="ch2">&#127757; Africa do Sul - especifico (ambos)</div><div id="ld-af"></div></div>
@@ -219,6 +256,7 @@ function updateTotal() {
 </div>
 
 <!-- ROTEIRO -->
+
 <div id="sec-crono" class="sec">
 <div class="dc"><div class="dn">Dia 1 &middot; Qui 14 mai</div><div class="dt">Partida - Sao Paulo</div><div class="ds">GRU &rarr; Johannesburg &middot; voo noturno</div></div>
 <div class="card">
@@ -259,7 +297,7 @@ function updateTotal() {
 
 <div class="dc"><div class="dn">Dia 5 &middot; Seg 18 mai</div><div class="dt">MILIMA Safari Lodge</div><div class="ds">Maseke Game Reserve &middot; Big 5 &middot; All-inclusive</div></div>
 <div class="card">
-  <div class="ti"><div class="tl"><div class="tm">ate 10h</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Gem &middot; pagar ZAR 2.106</div></div></div>
+  
   <div class="ti"><div class="tl"><div class="tm">13h-14h</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-in MILIMA Big 5 Safari Lodge</div><div class="tx">Archie Farm, Maseke Game Reserve<br>Cod 5220.867.961 &middot; PIN 8513 &middot; GPS S024 8.420 E30 56.167<br>Tenda luxo &middot; All-inclusive &middot; PAGO 100%</div><div class="tg tgy">Lua de mel + alergia pimenta/camarao informados</div></div></div>
   <div class="ti"><div class="tl"><div class="tm">noite</div><div class="td s"></div></div><div class="tc"><div class="tt">Safari noturno &#129409;</div></div></div>
   <div class="dr"><a class="di" href="https://drive.google.com/file/d/1BsqS483L1Ifeui9BzBn-u-Zj42EJW-jQ/view?usp=sharing" target="_blank">&#128196; Reserva MILIMA</a><a class="di" href="https://drive.google.com/file/d/1UPgjTPSGRazu9TNzggObHyHhLTE-l-_9/view?usp=sharing" target="_blank">&#9989; Pagto MILIMA</a></div>
@@ -283,7 +321,7 @@ function updateTotal() {
 
 <div class="dc"><div class="dn">Dia 8 &middot; Qui 21 mai</div><div class="dt">Satara &rarr; JNB &rarr; Cape Town</div><div class="ds">~6h30 carro + devolver + dois voos</div></div>
 <div class="card">
-  <div class="ti"><div class="tl"><div class="tm">ate 10h</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Satara &rarr; JNB</div></div></div>
+  
   <div class="ti"><div class="tl"><div class="tm">16h30</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Devolver Europcar JNB &middot; Res. 1200314755</div></div></div>
   <div class="ti"><div class="tl"><div class="tm">20h35</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Airlink 4Z937 &middot; JNB &rarr; CPT</div><div class="tx">Gustavo: 08C &middot; Fernanda: 08A &middot; Chegada 22h50</div></div></div>
   <div class="ti"><div class="tl"><div class="tm">22h30</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Retirar Europcar CPT &middot; Res. 1200314811</div></div></div>
@@ -308,34 +346,41 @@ function updateTotal() {
 
 <div class="dc"><div class="dn">Dia 11 &middot; Dom 24 mai</div><div class="dt">Stellenbosch</div><div class="ds">Tokara almoco &middot; vinhos &middot; Van der Stel Manor</div></div>
 <div class="card">
-  <div class="ti"><div class="tl"><div class="tm">10h00</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Loop Street</div></div></div>
-  <div class="ti"><div class="tl"><div class="tm">12h00</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Almoco Tokara Fine Dining &#127863;</div><div class="tx">Ref CC3676948 &middot; deposito ZAR 610 pago &middot; saldo a pagar no local!</div><div class="tg tgr">Saldo a pagar no restaurante</div></div></div>
-  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Rota dos Vinhos Stellenbosch</div><div class="tx">Lanzerac &middot; Delaire Graff &middot; Rust en Vrede</div></div></div>
+  
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">1&ordf; Lanzerac Wine Estate</div><div class="tx">Tasting Room 08h&ndash;17h &middot; caf&eacute; da manh&atilde; ou brunch na Deli &middot; cellar tour 11h</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">2&ordf; Delaire Graff Estate</div><div class="tx">Wine Lounge 10h&ndash;17h (dom) &middot; galeria de arte &middot; vistas panor&acirc;micas</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">12h00</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">3&ordf; Almoco Tokara Fine Dining &#127863;</div><div class="tx">Ref CC3676948 &middot; dep&oacute;sito ZAR 610 pago &middot; saldo a pagar no local!</div><div class="tg tgr">Saldo a pagar no restaurante</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">4&ordf; Rust en Vrede</div><div class="tx">Tasting Room 10h&ndash;16h (dom) &middot; Winemaker&rsquo;s Lunch 12h&ndash;15h &middot; ambiente &iacute;ntimo</div></div></div>
   <div class="ti"><div class="tl"><div class="tm">14h-18h</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Van der Stel Manor</div><div class="tx">Cod 6891.996.947 &middot; PIN 9213 &middot; +27 71 315 9631<br>ZAR 2.762 &middot; transferencia bancaria!</div><div class="tg tgr">Aguardar e-mail com instrucoes de transferencia</div></div></div>
   <div class="dr"><a class="di" href="https://drive.google.com/file/d/1JzeWwze6OMbQFe1DPc_Zg6tRLlBnbHBf/view?usp=sharing" target="_blank">&#128196; Tokara</a><a class="di" href="https://drive.google.com/file/d/1ZyvvxWc3S4pdvxPGwsuW6kUK5yGtOjRm/view?usp=sharing" target="_blank">&#128196; Van der Stel</a></div>
 </div>
 
 <div class="dc"><div class="dn">Dia 12 &middot; Seg 25 mai</div><div class="dt">Franschhoek</div><div class="ds">Wine Tram &middot; Haute Cabriere &middot; Auberge Clermont</div></div>
 <div class="card">
-  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Van der Stel (ate 10h)</div></div></div>
-  <div class="ti"><div class="tl"><div class="tm">dia todo</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Franschhoek Wine Tram &#128651;</div><div class="tx">Boschendal &middot; Haute Cabriere (sabre!) &middot; La Motte &middot; Leeu Passant<br>La Petite Colombe &middot; Franks Corner Bar</div></div></div>
+  
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">1&ordf; Parada &middot; Boschendal</div><div class="tx">Tasting Room &middot; caf&eacute; da manh&atilde; ou brunch &middot; seg&ndash;sex 09h&ndash;16h30</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">2&ordf; Parada &middot; Haute Cabri&egrave;re &#9758;</div><div class="tx">Tour diário 12h (chegar 11h50) &middot; sabrage + degusta&ccedil;&atilde;o &middot; ZAR 200/pessoa</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">3&ordf; Parada &middot; La Motte</div><div class="tx">Vinhos e museu Pierneef &middot; ter&ndash;sex 09h&ndash;17h &middot; padaria qua&ndash;dom</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">4&ordf; Parada &middot; Leeu Passant Winery</div><div class="tx">Wine Studio &middot; reserva obrigatória &middot; max 12 pessoas</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">La Petite Colombe &middot; jantar (se reservado)</div><div class="tx">Eleito um dos melhores restaurantes da &Aacute;frica do Sul &middot; reserva essencial</div></div></div>
   <div class="ti"><div class="tl"><div class="tm">14h-19h</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Auberge Clermont</div><div class="tx">Cod 5245.861.282 &middot; PIN 7662 &middot; +27 21 876 3700<br>ZAR 2.332 no local</div><div class="tg tgr">Ter ZAR 2.332 no Nomad!</div></div></div>
   <div class="dr"><a class="di" href="https://drive.google.com/file/d/1GrL_-EG8Sr98q2d3uMbRtdtaP4_nSbO8/view?usp=sharing" target="_blank">&#128196; Auberge Clermont</a></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 13 &middot; Ter 26 mai</div><div class="dt">Cape Town</div><div class="ds">Kirstenbosch &middot; Sea Point &middot; Lion Street</div></div>
+<div class="dc"><div class="dn">Dia 13 &middot; Ter 26 mai</div><div class="dt">Cape Town</div><div class="ds">Kirstenbosch &middot; Sea Point &middot; Camps Bay</div></div>
 <div class="card">
-  <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Check-out Auberge (ate 10h30)</div></div></div>
+  
   <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Kirstenbosch Botanical Garden &#127807;</div><div class="tx">ZAR 250/adulto &middot; 08h-18h (inverno)</div></div></div>
-  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Sea Point Promenade &middot; Camps Bay</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Sea Point Promenade</div><div class="tx">Caminhada beira-mar com vista para os Doze Ap&oacute;stolos</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Camps Bay &middot; jantar</div><div class="tx">Codfather &middot; The Bungalow &middot; Caf&eacute; Caprice &middot; Tiger&rsquo;s Milk</div></div></div>
   <div class="ti"><div class="tl"><div class="tm">15h00</div><div class="td s"></div></div><div class="tc"><div class="tt">Check-in Airbnb 40 Lion Street</div><div class="tx">Cod HM5T3WYEMK &middot; Julie +44 7868 818417 &middot; pago 100%</div></div></div>
   <div class="dr"><a class="di" href="https://drive.google.com/file/d/1P2WuUma9SAQRD6IapiqDdLQVUMsTsXJ3/view?usp=sharing" target="_blank">&#127968; Airbnb Lion St</a></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 14 &middot; Qua 27 mai</div><div class="dt">Cape Town</div><div class="ds">Robben Island &middot; Signal Hill &middot; Camps Bay</div></div>
+<div class="dc"><div class="dn">Dia 14 &middot; Qua 27 mai</div><div class="dt">Cape Town</div><div class="ds">Robben Island &middot; Signal Hill &middot; V&amp;A Waterfront</div></div>
 <div class="card">
   <div class="ti"><div class="tl"><div class="tm">manha</div><div class="td s"></div><div class="tl2"></div></div><div class="tc"><div class="tt">Robben Island &#127965;</div><div class="tx">Ferry V&amp;A Waterfront &middot; tour ~3h &middot; RESERVAR JA - esgota semanas antes!</div></div></div>
-  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div></div><div class="tc"><div class="tt">Signal Hill &middot; Camps Bay</div><div class="tx">Codfather &middot; The Bungalow &middot; Cafe Caprice &middot; Tiger's Milk</div></div></div>
+  <div class="ti"><div class="tl"><div class="tm">tarde</div><div class="td"></div></div><div class="tc"><div class="tt">Signal Hill &middot; V&amp;A Waterfront</div><div class="tx">Willoughby &amp; Co &middot; Tiger's Milk &middot; Time Out Market</div></div></div>
 </div>
 
 <div class="dc"><div class="dn">Dia 15 &middot; Qui 28 mai</div><div class="dt">Cape Town - jantar especial</div><div class="ds">V&amp;A Waterfront &middot; GOLD Restaurant 18h30</div></div>
@@ -355,93 +400,167 @@ function updateTotal() {
 </div>
 
 <!-- LUGARES -->
+
 <div id="sec-lugares" class="sec">
-<div class="dc"><div class="dn">Dia 2 &middot; Sex 15 mai</div><div class="dt">Johannesburg</div><div class="ds">Sandton &middot; Ellis Park &middot; Mandela Square</div></div>
+
+<!-- ===== DIA 2 · SEX 15/MAI · JOHANNESBURG ===== -->
+<div class="dc"><div class="dn">Dia 2 &middot; Sex 15/mai</div><div class="dt">Johannesburg</div><div class="ds">Ellis Park &middot; Sandton City &middot; Mandela Square</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb Sandton</div><div class="pa">24 Fredman Drive, The Lineal, Sandton 2031</div><div class="pp">15-17 mai &middot; Cod HMWDDDSZFM &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1z1xkDt_qvA0CeoPGjF3eCApFJ9bWD6XD/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
-  <div class="pi"><div class="pic">&#127967;</div><div><div class="pn">Ellis Park Stadium</div><div class="pa">Doornfontein &middot; historico estadio Copa 2010 &middot; visita externa</div></div></div>
-  <div class="pi"><div class="pic">&#128722;</div><div><div class="pn">Nelson Mandela Square</div><div class="pa">Sandton Drive &middot; estatua 6m do Mandela</div><div class="pd">Praca luxuosa com estatua de Mandela. Otimo para jantar ao ar livre.<br><strong style="color:var(--gol)">Trumps Grillhouse</strong> &mdash; cortes premiados de carne; <strong style="color:var(--gol)">TANG</strong> &mdash; asiatico sofisticado; <strong style="color:var(--gol)">La Parada</strong> &mdash; tapas espanholas; <strong style="color:var(--gol)">The Butcher Shop</strong> &mdash; classico de carnes nobres.</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb Sandton &middot; The Lineal</div><div class="pa">24 Fredman Drive, The Lineal, Sandton &middot; Cod HMWDDDSZFM</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in a partir das 14h &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1z1xkDt_qvA0CeoPGjF3eCApFJ9bWD6XD/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127967;</div><div><div class="pn">Ellis Park Stadium</div><div class="pa">Doornfontein, Johannesburg</div><div class="pd">Est&aacute;dio da Copa do Mundo 2010 &mdash; visual externo ic&ocirc;nico.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: somente visual externo</div></div></div>
+  <div class="pi"><div class="pic">&#128717;</div><div><div class="pn">Shopping Sandton City</div><div class="pa">Cnr Rivonia Rd &amp; Sandton Dr</div><div class="pd">374 lojas, restaurantes e o famoso Diamond Walk.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 09h&ndash;20h &middot; dom 09h&ndash;18h</div></div></div>
+  <div class="pi"><div class="pic">&#128717;</div><div><div class="pn">Checkers Hyper Sandton</div><div class="pa">Sandton City Mall, Cnr Alice Lane &amp; 5th St</div><div class="pd">Supermercado flagship &mdash; chocolatier, pizzaria a lenha, sushi bar. &Oacute;timo para &aacute;gua, snacks e repelente.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 09h&ndash;20h &middot; dom 09h&ndash;18h</div></div></div>
+  <div class="pi"><div class="pic">&#127978;</div><div><div class="pn">Mandela Square</div><div class="pa">West St, Sandton</div><div class="pd">Pra&ccedil;a com est&aacute;tua de 6m de Mandela, cercada de restaurantes para jantar.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: restaurantes 12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Trumps Grillhouse and Butcher</div><div class="pa">Nelson Mandela Square</div><div class="pd">Cortes premiados de carne maturada.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 12h&ndash;22h30</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Bigmouth Sushi &amp; Grill</div><div class="pa">Nelson Mandela Square</div><div class="pd">Sushi contempor&acirc;neo e grelha.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">La Parada Nelson Mandela Square</div><div class="pa">Nelson Mandela Square</div><div class="pd">Tapas espanholas em ambiente animado.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Butcher Shop &amp; Grill</div><div class="pa">Nelson Mandela Square</div><div class="pd">Cl&aacute;ssico de carnes nobres.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Cilantros &mdash; Nelson Mandela Square</div><div class="pa">Nelson Mandela Square</div><div class="pd">Menu variado internacional.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">TANG Asian Luxury Restaurant</div><div class="pa">Nelson Mandela Square</div><div class="pd">Asi&aacute;tico sofisticado.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 15/mai: 12h&ndash;23h</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 3 &middot; Sab 16 mai</div><div class="dt">Johannesburg</div><div class="ds">Apartheid Museum &middot; Soweto &middot; Rosebank</div></div>
+<!-- ===== DIA 3 · SAB 16/MAI · JOHANNESBURG ===== -->
+<div class="dc"><div class="dn">Dia 3 &middot; S&aacute;b 16/mai</div><div class="dt">Johannesburg</div><div class="ds">Museu do Apartheid &middot; Mandela House &middot; Rosebank</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127963;</div><div><div class="pn">Museu do Apartheid</div><div class="pa">Northern Parkway &middot; ZAR 170/pessoa &middot; 2-3h</div><div class="pd">Um dos museus mais poderosos do mundo. Ao entrar cada visitante recebe ingresso "branco" ou "nao-branco" aleatoriamente.</div><div class="dr"><a class="di" href="https://www.webtickets.co.za/v2/event.aspx?itemid=681080" target="_blank">&#127915; Comprar tickets</a></div></div></div>
-  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Mandela's House &middot; Soweto</div><div class="pa">8115 Vilakazi Street, Orlando West &middot; ZAR ~80/pessoa</div><div class="pd">Casa onde Mandela viveu antes de ser preso. So cartao (cashless desde dez/2025). Unica rua do mundo com dois Nobel.</div><div class="dr"><a class="di" href="https://www.mandelahouse.com/" target="_blank">&#127758; Site oficial</a></div></div></div>
-  <div class="pi"><div class="pic">&#127912;</div><div><div class="pn">Rosebank Mall + Art &amp; Craft Market</div><div class="pa">Bath Ave, Rosebank &middot; mercado de artesanato no terraco</div><div class="pd">Mercado de artesanato africano unico no terraço do mall &mdash; otimo para lembranças autenticas. Para jantar: <strong style="color:var(--gol)">MAMASAMBA</strong> &mdash; vibrante, cozinha latinoafricana com dj; <strong style="color:var(--gol)">PROUD MARY</strong> &mdash; moderno, menu criativo e drinques fantasticos.</div></div></div>
+  <div class="pi"><div class="pic">&#127963;</div><div><div class="pn">Museu do Apartheid</div><div class="pa">Northern Pkwy &amp; Gold Reef Rd, Ormonde</div><div class="pd">Um dos museus mais poderosos do mundo. Cada visitante recebe ingresso &ldquo;branco&rdquo; ou &ldquo;n&atilde;o-branco&rdquo; aleatoriamente. Reserve 2&ndash;3h.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 16/mai: 09h&ndash;17h (fecha seg e ter) &middot; ZAR 160/adulto</div><div class="dr"><a class="di" href="https://www.webtickets.co.za/v2/EventCategories.aspx?itemid=1517190624" target="_blank">&#127915; Comprar tickets</a></div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Mandela&rsquo;s House &middot; Soweto</div><div class="pa">8115 Vilakazi St, Orlando West, Soweto</div><div class="pd">Casa onde Mandela viveu. &Uacute;nica rua com dois Nobel. S&oacute; cart&atilde;o (cashless).</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 16/mai: 09h&ndash;17h &middot; ZAR ~80/pessoa</div><div class="dr"><a class="di" href="https://www.mandelahouse.com/" target="_blank">&#127758; Site oficial</a></div></div></div>
+  <div class="pi"><div class="pic">&#128717;</div><div><div class="pn">Rosebank Mall</div><div class="pa">Bath Ave, Rosebank</div><div class="pd">Mall sofisticado com African Craft Market no terraco.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 16/mai: 09h&ndash;21h</div></div></div>
+  <div class="pi"><div class="pic">&#128717;</div><div><div class="pn">Rosebank Art &amp; Craft Market</div><div class="pa">The Zone @ Rosebank, terraco</div><div class="pd">Artesanato africano aut&ecirc;ntico &mdash; m&aacute;scaras, esculturas, j&oacute;ias.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 16/mai: ~09h&ndash;17h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">PROUD MARY</div><div class="pa">The Zone @ Rosebank</div><div class="pd">Moderno, menu criativo e drinques fant&aacute;sticos.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 16/mai: 12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">MAMASAMBA</div><div class="pa">The Zone @ Rosebank</div><div class="pd">Vibrante, cozinha latinoafricana com DJ.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 16/mai: 12h&ndash;00h</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 4 &middot; Dom 17 mai</div><div class="dt">Rota Panoramica</div><div class="ds">Mac Mac Falls &middot; God's Window &middot; Three Rondavels &rarr; Hoedspruit</div></div>
+<!-- ===== DIA 4 · DOM 17/MAI · ROTA PANORAMICA ===== -->
+<div class="dc"><div class="dn">Dia 4 &middot; Dom 17/mai</div><div class="dt">Rota Panor&acirc;mica</div><div class="ds">Mac Mac Falls &middot; God&rsquo;s Window &middot; Three Rondavels &rarr; Hoedspruit</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">Mac Mac Falls</div><div class="pa">R532, 13km de Sabie &middot; pequena taxa</div><div class="pd">Cachoeira dupla de 65m criada por mineradores escoceses com dinamite no sec. XIX. Arco-iris quase todo dia.</div></div></div>
-  <div class="pi"><div class="pic">&#129695;</div><div><div class="pn">God's Window</div><div class="pa">Blyde River Canyon Reserve &middot; ~ZAR 180/pessoa</div><div class="pd">Penhascos caem 700-900m para o Lowveld. Em dia claro da para ver o Kruger!</div></div></div>
-  <div class="pi"><div class="pic">&#127744;</div><div><div class="pn">Bourke's Luck Potholes</div><div class="pa">Confluencia rios Blyde e Treur &middot; ~ZAR 180</div><div class="pd">Formacoes cilindricas esculpidas por milenios de redemoinhos.</div></div></div>
-  <div class="pi"><div class="pic">&#127956;</div><div><div class="pn">Three Rondavels &middot; Blyde River Canyon</div><div class="pa">Panorama Route &middot; 3o maior canion do mundo</div><div class="pd">Tres rochas de 700m que imitam cabanas africanas. Por do sol epico.</div></div></div>
-  <div class="pi"><div class="pic">&#127957;</div><div><div class="pn">Gem In The Bush Lodge</div><div class="pa">682 Kierieklapper St, Hoedspruit &middot; +27 72 975 2843</div><div class="pp">17-18 mai &middot; PIN 5222 &middot; ZAR 2.106 no local</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1srifDFsx6qtP6nMhAE5R-3LtA_5lga2f/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127866;</div><div><div class="pn">Sabie Brewing Co.</div><div class="pa">Main St, Sabie</div><div class="pd">Cervejaria artesanal &mdash; parada para caf&eacute; da manh&atilde; no in&iacute;cio da rota.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: ~09h&ndash;17h</div></div></div>
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">Mac Mac Falls</div><div class="pa">R532, 13km de Sabie</div><div class="pd">Cachoeira dupla de 65m. Arco-&iacute;ris quase todo dia.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: 08h&ndash;17h &middot; ZAR ~50/pessoa</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Divine Foods At The View</div><div class="pa">Rota Panor&acirc;mica</div><div class="pd">Restaurante com vista panor&acirc;mica &mdash; parada ideal para almo&ccedil;o.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: ~10h&ndash;16h</div></div></div>
+  <div class="pi"><div class="pic">&#129695;</div><div><div class="pn">God&rsquo;s Window</div><div class="pa">Blyde River Canyon Reserve</div><div class="pd">Penhascos de 700&ndash;900m. Em dia claro d&aacute; para ver o Kruger.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: 06h&ndash;18h &middot; ZAR ~180/adulto</div></div></div>
+  <div class="pi"><div class="pic">&#127744;</div><div><div class="pn">Bourke&rsquo;s Luck Potholes</div><div class="pa">Confluência rios Blyde e Treur</div><div class="pd">Forma&ccedil;&otilde;es cil&iacute;ndricas esculpidas por redemoinhos milenares.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: 07h&ndash;17h &middot; ZAR ~180/adulto</div></div></div>
+  <div class="pi"><div class="pic">&#127956;</div><div><div class="pn">Three Rondavels &middot; Blyde River Canyon</div><div class="pa">Panorama Route</div><div class="pd">3&ordm; maior c&acirc;nion do mundo. Por do sol &eacute;pico &mdash; chegar antes das 17h.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: 06h&ndash;18h &middot; gratuito</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Gem In The Bush Lodge &middot; Hoedspruit</div><div class="pa">682 Kierieklapper St, Hoedspruit &middot; PIN 5222</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in noite &middot; ZAR 2.106 no local</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1srifDFsx6qtP6nMhAE5R-3LtA_5lga2f/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Hat &amp; Creek</div><div class="pa">Hoedspruit</div><div class="pd">Restaurante descontra&iacute;do para jantar ap&oacute;s a rota.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 17/mai: ~12h&ndash;21h</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dias 5 e 6 &middot; 18-19 mai</div><div class="dt">MILIMA Safari Lodge</div><div class="ds">Maseke Game Reserve &middot; Big 5 &middot; All-inclusive</div></div>
+<!-- ===== DIAS 5-6 · 18-19/MAI · MILIMA SAFARI ===== -->
+<div class="dc"><div class="dn">Dias 5&ndash;6 &middot; 18&ndash;19/mai</div><div class="dt">MILIMA Big 5 Safari Lodge</div><div class="ds">Maseke Game Reserve &middot; All-inclusive</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#129409;</div><div><div class="pn">MILIMA Big 5 Safari Lodge</div><div class="pa">Archie Farm, Maseke Game Reserve &middot; +27 15 793 7900</div><div class="pd">Lodge de luxo. All-inclusive com safaris manha e noite. Big 5 garantido. Lua de mel + alergias informados.</div><div class="pp">18-20 mai &middot; GPS S024 8.420 E30 56.167 &middot; PAGO 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1BsqS483L1Ifeui9BzBn-u-Zj42EJW-jQ/view?usp=sharing" target="_blank">&#128196; Reserva</a><a class="di" href="https://drive.google.com/file/d/1UPgjTPSGRazu9TNzggObHyHhLTE-l-_9/view?usp=sharing" target="_blank">&#9989; Pagamento</a></div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">MILIMA Big 5 Safari Lodge</div><div class="pa">Archie Farm, Maseke Game Reserve &middot; GPS S024 8.420 E30 56.167 &middot; PIN 8513</div><div class="pd">All-inclusive com safaris manh&atilde; (~05h30) e noite (~16h). Big 5 garantido.</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in 13h&ndash;14h &middot; check-out at&eacute; 10h &middot; PAGO 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1BsqS483L1Ifeui9BzBn-u-Zj42EJW-jQ/view?usp=sharing" target="_blank">&#128196; Reserva</a><a class="di" href="https://drive.google.com/file/d/1UPgjTPSGRazu9TNzggObHyHhLTE-l-_9/view?usp=sharing" target="_blank">&#9989; Pagamento</a></div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 7 &middot; Qua 20 mai</div><div class="dt">Kruger - Self Drive</div><div class="ds">Orpen Gate &rarr; H7 &rarr; Satara</div></div>
+<!-- ===== DIA 7 · QUA 20/MAI · KRUGER SELF DRIVE ===== -->
+<div class="dc"><div class="dn">Dia 7 &middot; Qua 20/mai</div><div class="dt">Kruger &middot; Self Drive</div><div class="ds">Orpen Gate &rarr; H7 &rarr; Satara</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#129362;</div><div><div class="pn">Kruger National Park</div><div class="pa">Orpen Gate &rarr; H7 &rarr; Rabelais &rarr; Bobbejaan &rarr; Satara</div><div class="pd">Max 50km/h. NUNCA sair do carro. Portao fecha 17h30 em maio!</div></div></div>
-  <div class="pi"><div class="pic">&#127957;</div><div><div class="pn">Satara Rest Camp</div><div class="pa">Kruger National Park &middot; GPS -24.392580, 31.779530</div><div class="pp">20-21 mai &middot; Reserva RR386984 &middot; PAGO 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1e4APJSd2UxmMsNY8FSxYTF7YhXhRz8Vp/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#128663;</div><div><div class="pn">Orpen Gate &middot; Entrada Kruger</div><div class="pa">GPS: -24.392580 S, 31.779530 E</div><div class="pd">Seguir H7 dire&ccedil;&atilde;o Satara. Taxa: ZAR 134/adulto/dia. Max 50km/h. NUNCA sair do carro.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 20/mai: abre 06h &middot; <strong>fecha 17h30 &mdash; n&atilde;o atrase!</strong></div></div></div>
+  <div class="pi"><div class="pic">&#128663;</div><div><div class="pn">Rabelais Gate &rarr; Rabelais Waterhole</div><div class="pa">Estrada S106, dentro do Kruger (desvio da H7)</div><div class="pd">Ponto de vida selvagem &mdash; le&otilde;es e b&uacute;falos frequentes. Desvio curto, retornar para H7.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Estrada S106 &middot; desvio curto, retornar para H7</div></div></div>
+  <div class="pi"><div class="pic">&#128663;</div><div><div class="pn">Bobbejaan &middot; Observat&oacute;rio</div><div class="pa">H7, Kruger National Park</div><div class="pd">Mirante na H7 &mdash; &aacute;rea conhecida por leopardos e rinocerontes.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Parada no caminho at&eacute; Satara</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Satara Rest Camp</div><div class="pa">Kruger National Park &middot; GPS -24.392580, 31.779530</div><div class="pd">Camp rodeado de plan&iacute;cies &mdash; habitat ideal para le&otilde;es. Restaurante e mercado no camp.</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in 14h &middot; Reserva RR386984 &middot; PAGO 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1e4APJSd2UxmMsNY8FSxYTF7YhXhRz8Vp/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Cattle Baron Satara</div><div class="pa">Satara Rest Camp, Kruger</div><div class="pd">Restaurante dentro do camp. Jantar no Satara ap&oacute;s o self drive.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 20/mai: ~07h&ndash;21h</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 9 &middot; Sex 22 mai</div><div class="dt">Cape Town</div><div class="ds">Table Mountain &middot; Bo-Kaap &middot; V&A Waterfront</div></div>
+
+<!-- ===== DIA 8 · QUI 21/MAI · SATARA → JHB → CAPE TOWN ===== -->
+<div class="dc"><div class="dn">Dia 8 &middot; Qui 21/mai</div><div class="dt">Satara &rarr; Johannesburg &rarr; Cape Town</div><div class="ds">Transfer &middot; Voo JNB&rarr;CPT &middot; Airlink 4Z937</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb 220 Loop Street Apto 307</div><div class="pa">Cape Town City Centre &middot; Michelle +27 76 638 4405</div><div class="pp">21-24 mai &middot; Cod HMJ2DQS9T9 &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1PrfQRcR8PWRT1RInJcuqBlZWHKmG7HtA/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
-  <div class="pi"><div class="pic">&#127956;</div><div><div class="pn">Table Mountain</div><div class="pa">Tafelberg Rd &middot; comprar tickets online - lota!</div><div class="pd">600M anos de idade. Uma das Novas 7 Maravilhas da Natureza. Telefererico rotativo vista 360.</div><div class="dr"><a class="di" href="https://www.tablemountain.net/plan-your-visit/buy-tickets" target="_blank">&#127915; Comprar tickets</a></div></div></div>
-  <div class="pi"><div class="pic">&#127912;</div><div><div class="pn">Bo-Kaap &middot; Long Street &middot; Truth Coffee</div><div class="pa">Signal Hill, Cape Town</div><div class="pd">Bairro historico Malaio-Cape com casinhas coloridas. Truth Coffee: eleito melhor cafe do mundo.</div></div></div>
-  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront</div><div class="pa">Victoria &amp; Alfred Waterfront, Cape Town</div><div class="pd">Porto historico transformado em complexo de lazer com vista para a Table Mountain. <strong style="color:var(--gol)">Den Anker</strong> &mdash; frutos do mar belgas com vista ao mar; <strong style="color:var(--gol)">Time Out Market</strong> &mdash; mercado gastronômico com o melhor de CPT; <strong style="color:var(--gol)">Tiger's Milk</strong> &mdash; hamburguers e batatas fritas classicos; <strong style="color:var(--gol)">Truth Coffee</strong> &mdash; eleito melhor cafe do mundo, decoracao steampunk incrivel.</div></div></div>
+  <div class="pi"><div class="pic">&#128663;</div><div><div class="pn">Estrada Satara &rarr; Johannesburg</div><div class="pa">~6h30 de estrada</div><div class="pd">Sair cedo do Satara. Devolver carro no aeroporto de Johannesburg. Chegar no JNB &agrave;s 16h.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qui 21/mai: sair Satara ~08h &middot; devolver carro 16h</div></div></div>
+  <div class="pi"><div class="pic">&#9992;</div><div><div class="pn">Voo Airlink 4Z937 &middot; JNB &rarr; CPT</div><div class="pa">Aeroporto O.R. Tambo, Johannesburg</div><div class="pd">Embarque no aeroporto. Retirada do carro em Cape Town ao desembarcar.</div><div style="font-size:10px;color:var(--go);margin-top:2px">&#128336; Qui 21/mai: sa&iacute;da 20h35 JNB &middot; chegada 22h50 CPT</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1xo8XHDkkKobGKOPnpJaKBJqREzlVsG55/view?usp=sharing" target="_blank">&#128196; Airlink Fernanda</a><a class="di" href="https://drive.google.com/file/d/1xU19_sqIRbDRAtfH8cwSbi_cqwpHs0Eu/view?usp=sharing" target="_blank">&#128196; Airlink Gustavo</a></div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb Loop Street &middot; Check-in</div><div class="pa">220 Loop St, Apto 307, Cape Town &middot; Cod HMJ2DQS9T9</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in ap&oacute;s chegada ~23h &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1PrfQRcR8PWRT1RInJcuqBlZWHKmG7HtA/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 10 &middot; Sab 23 mai</div><div class="dt">Peninsula do Cabo</div><div class="ds">Muizenberg &middot; Pinguins &middot; Cape Point &middot; Chapman's Peak</div></div>
+<!-- ===== DIA 9 · SEX 22/MAI · CAPE TOWN ===== -->
+<div class="dc"><div class="dn">Dia 9 &middot; Sex 22/mai</div><div class="dt">Cape Town</div><div class="ds">Table Mountain &middot; Bo-Kaap &middot; Long Street &middot; V&amp;A Waterfront</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Muizenberg Beach</div><div class="pa">Beach Road, Muizenberg</div><div class="pd">Casinhas de praia coloridas iconicas. Berco do surf sul-africano. Empire Cafe para cafe da manha.</div></div></div>
-  <div class="pi"><div class="pic">&#128039;</div><div><div class="pn">Boulders Beach - Pinguins!</div><div class="pa">Simon's Town &middot; ZAR ~180/pessoa</div><div class="pd">Colonia de pinguins africanos em extincao. Passarelas entre os ninhos. The Lighthouse Cafe para almoco.</div><div class="dr"><a class="di" href="https://www.sanparks.org/tickets/tickets.php" target="_blank">&#127915; Tickets SANParks</a></div></div></div>
-  <div class="pi"><div class="pic">&#9968;</div><div><div class="pn">Cape Point &middot; Cabo da Boa Esperanca</div><div class="pa">SANParks &middot; ZAR 515/adulto estrangeiro &middot; funicular +ZAR 115</div><div class="pd">Ponta mais sudoeste da Africa. Atlantico encontra o Indico. Farol historico. Baboons pelo caminho!</div><div class="dr"><a class="di" href="https://www.sanparks.org/tickets/tickets.php" target="_blank">&#127915; Tickets SANParks</a><a class="di" href="https://capepoint.co.za/visitus/" target="_blank">&#8505; Info precos</a></div></div></div>
-  <div class="pi"><div class="pic">&#127739;</div><div><div class="pn">Chapman's Peak Drive</div><div class="pa">Hout Bay &rarr; Noordhoek &middot; pedagio ~ZAR 50</div><div class="pd">9km com 114 curvas entre penhascos e o Atlantico. Uma das mais belas estradas do mundo. Para na saida: <strong style="color:var(--gol)">Fish on the Rocks</strong> (Hout Bay) &mdash; peixe e camarao frescassimo direto do porto, comida na pedra; <strong style="color:var(--gol)">Mariner's Wharf</strong> &mdash; classico de frutos do mar em Hout Bay. Nao alimente os babuinos!</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb Loop Street, Apto 307</div><div class="pa">220 Loop St, Apto 307, Cape Town &middot; Cod HMJ2DQS9T9</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in 23h+ (ap&oacute;s chegada voo) &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1PrfQRcR8PWRT1RInJcuqBlZWHKmG7HtA/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127956;</div><div><div class="pn">Table Mountain</div><div class="pa">Tafelberg Rd &middot; comprar tickets online!</div><div class="pd">Uma das Novas 7 Maravilhas da Natureza. Teleférico rotativo 360&deg;. Fecha com vento forte &mdash; checar no dia.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: 08h30&ndash;18h (ult. subida 17h) &middot; ZAR 450 online</div><div class="dr"><a class="di" href="https://www.tablemountain.net/plan-your-visit/buy-tickets" target="_blank">&#127915; Comprar tickets</a></div></div></div>
+  <div class="pi"><div class="pic">&#127912;</div><div><div class="pn">Bo-Kaap</div><div class="pa">Signal Hill, Cape Town</div><div class="pd">Bairro hist&oacute;rico com casinhas coloridas pastel e mesquita.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: vis&iacute;vel 24h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Bo-Kaap Kombuis</div><div class="pa">Bo-Kaap, Cape Town</div><div class="pd">Culin&aacute;ria Cape Malay aut&ecirc;ntica &mdash; curries e biryani.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: ~10h&ndash;21h</div></div></div>
+  <div class="pi"><div class="pic">&#128694;</div><div><div class="pn">Shortmarket Street</div><div class="pa">Shortmarket St, Cape Town City Centre</div><div class="pd">Galerias, lojas de design e caf&eacute;s.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: lojas ~09h&ndash;18h</div></div></div>
+  <div class="pi"><div class="pic">&#128694;</div><div><div class="pn">Long Street</div><div class="pa">Long St, Cape Town</div><div class="pd">Rua mais animada de CPT &mdash; livrarias, bares e lojas vintage.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: lojas 09h&ndash;18h &middot; bares at&eacute; 00h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Tiger&rsquo;s Milk Long Street</div><div class="pa">Long St, Cape Town</div><div class="pd">Hambúrgueres e batatas fritas, vista incr&iacute;vel.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: 11h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#9749;</div><div><div class="pn">Truth Coffee Roasting</div><div class="pa">36 Buitenkant St, Cape Town</div><div class="pd">Eleito melhor caf&eacute; do mundo. Decora&ccedil;&atilde;o steampunk &uacute;nica.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: seg&ndash;sex 07h&ndash;18h &middot; s&aacute;b 08h&ndash;15h &middot; dom fechado</div></div></div>
+  <div class="pi"><div class="pic">&#128717;</div><div><div class="pn">Chad Henning Photographic Gallery</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Galeria de fotografia de vida selvagem africana.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: ~09h&ndash;18h</div></div></div>
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront</div><div class="pa">Victoria &amp; Alfred Waterfront</div><div class="pd">Porto hist&oacute;rico com restaurantes, compras e o melhor por do sol de CPT.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: mall 09h&ndash;21h &middot; restaurantes at&eacute; 23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Den Anker</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Frutos do mar belgas com vista ao mar.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Time Out Market Cape Town</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Mercado gastron&ocirc;mico com os melhores chefs de CPT.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Sex 22/mai: 11h&ndash;22h (dom&ndash;qui) &middot; 11h&ndash;23h (sex&ndash;s&aacute;b)</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 11 &middot; Dom 24 mai</div><div class="dt">Stellenbosch</div><div class="ds">Tokara almoco &middot; vinhos &middot; Van der Stel Manor</div></div>
+<!-- ===== DIA 10 · SAB 23/MAI · PENINSULA ===== -->
+<div class="dc"><div class="dn">Dia 10 &middot; S&aacute;b 23/mai</div><div class="dt">Peninsula do Cabo</div><div class="ds">Muizenberg &middot; Pingu&iacute;ns &middot; Cape Point &middot; Chapman&rsquo;s Peak</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">Tokara Fine Dining</div><div class="pa">Helshoogte Pass &middot; +27 21 885 2550 &middot; 12h00</div><div class="pd">Restaurante de fine dining de uma das vinicolas mais premiadas de Stellenbosch. Vista espetacular para os vinhedos e o vale. Menu sazonal com ingredientes locais. <strong style="color:#e88aaa">Deposito ZAR 610 pago &mdash; saldo a pagar no local!</strong></div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1JzeWwze6OMbQFe1DPc_Zg6tRLlBnbHBf/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
-  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">Rota dos Vinhos &middot; Stellenbosch</div><div class="pa">Lanzerac &middot; Delaire Graff &middot; Rust en Vrede</div><div class="pd"><strong style="color:var(--gol)">Lanzerac</strong> &mdash; uma das vinicolas mais antigas (1692), arquitetura Cape Dutch historica; <strong style="color:var(--gol)">Delaire Graff</strong> &mdash; galeria de arte + restaurante premiado, vista incrivel para as montanhas; <strong style="color:var(--gol)">Rust en Vrede</strong> &mdash; cabernets premiados internacionalmente, ambiente intimista.</div></div></div>
-  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Van der Stel Manor</div><div class="pa">64 Van Der Stel Road &middot; +27 71 315 9631</div><div class="pp">24-25 mai &middot; PIN 9213 &middot; ZAR 2.762 por transferencia</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1ZyvvxWc3S4pdvxPGwsuW6kUK5yGtOjRm/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Muizenberg Beach</div><div class="pa">Beach Rd, Muizenberg</div><div class="pd">Casinhas coloridas ic&ocirc;nicas. Ber&ccedil;o do surf sul-africano.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: praia 24h</div></div></div>
+  <div class="pi"><div class="pic">&#9749;</div><div><div class="pn">Empire Caf&eacute;</div><div class="pa">The Pavilion, Beach Rd, Muizenberg</div><div class="pd">Caf&eacute; de frente para a praia &mdash; caf&eacute; da manh&atilde; perfeito.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: 08h30&ndash;16h (fecha seg)</div></div></div>
+  <div class="pi"><div class="pic">&#128694;</div><div><div class="pn">Simon&rsquo;s Town</div><div class="pa">Simon&rsquo;s Town, Cape Peninsula</div><div class="pd">Cidade hist&oacute;rica port&aacute;ria antes dos pingu&iacute;ns.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: lojas ~09h&ndash;17h</div></div></div>
+  <div class="pi"><div class="pic">&#128039;</div><div><div class="pn">Boulders Beach &middot; Pingu&iacute;ns!</div><div class="pa">Simon&rsquo;s Town &middot; ZAR ~180/adulto estrangeiro</div><div class="pd">Col&ocirc;nia de pingu&iacute;ns africanos. Passarelas entre os ninhos.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: 08h&ndash;18h</div><div class="dr"><a class="di" href="https://www.sanparks.org/tickets/tickets.php" target="_blank">&#127915; Tickets SANParks</a></div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Lighthouse Caf&eacute;</div><div class="pa">Simon&rsquo;s Town</div><div class="pd">Almo&ccedil;o de frutos do mar pr&oacute;ximo aos pingu&iacute;ns.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: ~09h&ndash;17h</div></div></div>
+  <div class="pi"><div class="pic">&#9968;</div><div><div class="pn">Cabo da Boa Esperan&ccedil;a &middot; Cape Point</div><div class="pa">Cape Point Reserve &middot; ZAR 515/adulto + funicular ZAR 115</div><div class="pd">Ponta mais sudoeste da &Aacute;frica. Atl&acirc;ntico encontra o &Iacute;ndico. Baboons &mdash; n&atilde;o alimentar!</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: 07h&ndash;17h &middot; funicular 09h&ndash;17h</div><div class="dr"><a class="di" href="https://www.sanparks.org/tickets/tickets.php" target="_blank">&#127915; Tickets SANParks</a></div></div></div>
+  <div class="pi"><div class="pic">&#128663;</div><div><div class="pn">Chapman&rsquo;s Peak Drive</div><div class="pa">Hout Bay &rarr; Noordhoek &middot; ped&aacute;gio ~ZAR 50</div><div class="pd">9km com 114 curvas. Uma das mais belas estradas do mundo.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: 24h &middot; ped&aacute;gio ~ZAR 50</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Fish on the Rocks</div><div class="pa">Hout Bay Harbour</div><div class="pd">Peixe e camar&atilde;o fresc&iacute;ssimo direto do porto.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: 09h&ndash;18h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Mariner&rsquo;s Wharf Harbour Front</div><div class="pa">Hout Bay Harbour</div><div class="pd">Cl&aacute;ssico de frutos do mar em Hout Bay.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: 09h&ndash;18h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Aegir Project Brewery Noordhoek</div><div class="pa">Noordhoek Farm Village</div><div class="pd">Cervejaria artesanal no final de Chapman&rsquo;s Peak &mdash; parada para uma cerveja com vista.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; S&aacute;b 23/mai: ~11h&ndash;21h</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 12 &middot; Seg 25 mai</div><div class="dt">Franschhoek</div><div class="ds">Wine Tram &middot; Haute Cabriere &middot; Auberge Clermont</div></div>
+<!-- ===== DIA 11 · DOM 24/MAI · STELLENBOSCH ===== -->
+<div class="dc"><div class="dn">Dia 11 &middot; Dom 24/mai</div><div class="dt">Stellenbosch</div><div class="ds">Lanzerac &rarr; Delaire Graff &rarr; Tokara &rarr; Rust en Vrede</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#128651;</div><div><div class="pn">Franschhoek Wine Tram</div><div class="pa">Boschendal &middot; Haute Cabriere &middot; La Motte &middot; Leeu Passant</div><div class="pd">Bondinho que percorre o vale parando nas vinicolas. <strong style="color:var(--gol)">Boschendal</strong> &mdash; uma das mais belas, arquitetura Cape Dutch de 1685 e jardins historicos; <strong style="color:var(--gol)">La Motte</strong> &mdash; arte, musica e vinhos excepcionais; <strong style="color:var(--gol)">Leeu Passant</strong> &mdash; boutique de altissimo nivel; <strong style="color:var(--gol)">La Petite Colombe</strong> &mdash; eleito um dos melhores restaurantes da Africa do Sul, fine dining frances com ingredientes locais.</div></div></div>
-  <div class="pi"><div class="pic">&#10024;</div><div><div class="pn">Haute Cabriere - tour especial</div><div class="pa">ZAR 200/pessoa &middot; todo dia as 12h</div><div class="pd">Chegar 10min antes e comprar no balcao da padaria. Inclui historia, sabrage (abertura com sabre!) e degustacao. Tours privados seg-sex 10h-11h30.</div><div class="dr"><a class="di" href="https://mail.google.com/mail/?view=cm&to=reservations@cabriere.co.za" target="_blank">&#128231; reservations@cabriere.co.za</a></div></div></div>
-  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Auberge Clermont</div><div class="pa">Robertsvlei Road, Franschhoek &middot; +27 21 876 3700</div><div class="pp">25-26 mai &middot; PIN 7662 &middot; ZAR 2.332 no local</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1GrL_-EG8Sr98q2d3uMbRtdtaP4_nSbO8/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">1&ordf; Lanzerac Wine Estate</div><div class="pa">1 Lanzerac Rd, Jonkershoek Valley &middot; +27 21 887 1132</div><div class="pd">A mais antiga de Stellenbosch (1692) e ber&ccedil;o do Pinotage. Arquitetura Cape Dutch. Cellar tour 11h e 15h.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: Tasting Room 08h&ndash;17h &middot; Deli aberta 7 dias</div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">2&ordf; Delaire Graff Estate</div><div class="pa">Helshoogte Pass &middot; +27 21 885 8160</div><div class="pd">Galeria de arte contempor&acirc;nea + vinhos excepcionais + vista panor&acirc;mica. Wine Lounge sem reserva.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: Wine Lounge 10h&ndash;17h &middot; Restaurante almo&ccedil;o 12h&ndash;14h30</div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">3&ordf; Tokara Wine Estate &middot; ALMO&Ccedil;O RESERVADO</div><div class="pa">Helshoogte Pass &middot; +27 21 885 2550 &middot; Reservado 12h00</div><div class="pd">Fine dining com vista para os vinhedos. <strong style="color:#e88aaa">Dep&oacute;sito ZAR 610 pago &mdash; saldo no local!</strong></div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: 12h&ndash;15h &middot; aberto qua&ndash;dom</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1JzeWwze6OMbQFe1DPc_Zg6tRLlBnbHBf/view?usp=sharing" target="_blank">&#128196; Reserva Tokara</a></div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">4&ordf; Rust en Vrede</div><div class="pa">Annandale Rd, Stellenbosch &middot; +27 21 881 3881</div><div class="pd">Cabernets premiados mundialmente desde 1694. Winemaker&rsquo;s Lunch: steak ou salm&atilde;o sob os carvalhos.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: Tasting Room 10h&ndash;16h &middot; Winemaker&rsquo;s Lunch 12h&ndash;15h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Post &amp; Pepper Restaurant</div><div class="pa">Stellenbosch</div><div class="pd">Op&ccedil;&atilde;o para jantar antes do check-in.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: ~12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Stellenbosch Wine Bar</div><div class="pa">Stellenbosch centro</div><div class="pd">Bar de vinhos no cora&ccedil;&atilde;o de Stellenbosch.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: ~12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Hussar Grill Stellenbosch</div><div class="pa">Stellenbosch</div><div class="pd">Steakhouse cl&aacute;ssico sul-africano.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Dom 24/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Van der Stel Manor</div><div class="pa">64 Van Der Stel Rd, Stellenbosch &middot; +27 71 315 9631 &middot; PIN 9213</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in 14h&ndash;18h &middot; ZAR 2.762 por transfer&ecirc;ncia &middot; aguardar e-mail!</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1ZyvvxWc3S4pdvxPGwsuW6kUK5yGtOjRm/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 13 &middot; Ter 26 mai</div><div class="dt">Cape Town</div><div class="ds">Kirstenbosch &middot; Sea Point &middot; Lion Street</div></div>
+<!-- ===== DIA 12 · SEG 25/MAI · FRANSCHHOEK ===== -->
+<div class="dc"><div class="dn">Dia 12 &middot; Seg 25/mai</div><div class="dt">Franschhoek</div><div class="ds">Boschendal &rarr; Haute Cabri&egrave;re &rarr; La Motte &rarr; Leeu Passant &rarr; La Petite Colombe</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127807;</div><div><div class="pn">Kirstenbosch National Botanical Garden</div><div class="pa">Rhodes Drive, Newlands &middot; ZAR 250/adulto &middot; 08h-18h</div><div class="pd">Jardim botanico no sope da Table Mountain. 7.000 plantas nativas. Um dos mais belos do mundo.</div><div class="dr"><a class="di" href="https://www.webtickets.co.za/v2/event.aspx?itemid=649795" target="_blank">&#127915; Comprar tickets</a></div></div></div>
-  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Sea Point Promenade &middot; Camps Bay</div><div class="pa">Passeio a beira-mar com vista para os Doze Apostolos</div><div class="pd">Praia mais glamourosa de Cape Town. <strong style="color:var(--gol)">Codfather</strong> &mdash; frutos do mar fresquissimos escolhidos na pedra; <strong style="color:var(--gol)">The Bungalow</strong> &mdash; coquetel ao por do sol com os pes na areia; <strong style="color:var(--gol)">Cafe Caprice</strong> &mdash; classico boémio de Camps Bay; <strong style="color:var(--gol)">Tiger's Milk</strong> &mdash; vista incrivel, menu casual.</div></div></div>
-  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb 40 Lion Street</div><div class="pa">Cape Town 8001 &middot; Julie +44 7868 818417</div><div class="pp">26-29 mai &middot; Cod HM5T3WYEMK &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1P2WuUma9SAQRD6IapiqDdLQVUMsTsXJ3/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">1&ordf; Boschendal</div><div class="pa">10 Park Dr, 99 Helshoogte Rd, Franschhoek &middot; +27 21 870 4200</div><div class="pd">Uma das mais belas vinicolas (1685). Jardins hist&oacute;ricos e arquitetura Cape Dutch. Caf&eacute; da manh&atilde; ou brunch.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Seg 25/mai: Tasting Room seg&ndash;sex 09h&ndash;16h30</div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">2&ordf; Haute Cabri&egrave;re &middot; Tour do Sabre</div><div class="pa">Franschhoek Pass Rd &middot; ZAR 200/pessoa</div><div class="pd">Tour di&aacute;rio 12h (chegar 11h50, comprar no bal&ccedil;&atilde;o da padaria). Inclui sabrage (abertura com sabre!) e degusta&ccedil;&atilde;o.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Seg 25/mai: tour 12h &middot; Tasting Room 10h&ndash;17h</div><div class="dr"><a class="di" href="https://mail.google.com/mail/?view=cm&to=reservations@cabriere.co.za" target="_blank">&#128231; <span class="__cf_email__" data-cfemail="a0d2c5d3c5d2d6c1d4c9cfced3e0c3c1c2d2c9c5d2c58ec3cf8edac1">[email&#160;protected]</span></a></div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">3&ordf; La Motte</div><div class="pa">R45 Main Rd, Franschhoek &middot; +27 21 876 8000</div><div class="pd">Arte, m&uacute;sica e vinhos excepcionais. Museu Pierneef e padaria artesanal.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Seg 25/mai: Tasting Room ter&ndash;sex 09h&ndash;17h &middot; padaria qua&ndash;dom</div></div></div>
+  <div class="pi"><div class="pic">&#127863;</div><div><div class="pn">4&ordf; Leeu Passant Winery</div><div class="pa">Leeu Estates, Franschhoek &middot; <strong>Reserva obrigat&oacute;ria</strong></div><div class="pd">Wine Studio premiado. Vinhos Mullineux de renome internacional. M&aacute;x. 12 pessoas.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Seg 25/mai: hor&aacute;rios conforme reserva</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">La Petite Colombe</div><div class="pa">Leeu Estates, Franschhoek &middot; <strong>Reservar com muita anteced&ecirc;ncia!</strong></div><div class="pd">Eleito um dos melhores restaurantes da &Aacute;frica do Sul. Fine dining franc&ecirc;s &mdash; lota semanas antes!</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Seg 25/mai: almo&ccedil;o 12h&ndash;14h &middot; jantar 18h30&ndash;21h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Franks Corner Bar and Grill</div><div class="pa">Franschhoek centro</div><div class="pd">Bar descontra&iacute;do para encerrar o dia.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Seg 25/mai: ~12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Auberge Clermont &middot; Franschhoek</div><div class="pa">Robertsvlei Rd, Franschhoek &middot; +27 21 876 3700 &middot; PIN 7662</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in 14h&ndash;19h &middot; ZAR 2.332 no local</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1GrL_-EG8Sr98q2d3uMbRtdtaP4_nSbO8/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 14 &middot; Qua 27 mai</div><div class="dt">Cape Town</div><div class="ds">Robben Island &middot; Signal Hill &middot; Camps Bay</div></div>
+<!-- ===== DIA 13 · TER 26/MAI · CAPE TOWN ===== -->
+<div class="dc"><div class="dn">Dia 13 &middot; Ter 26/mai</div><div class="dt">Cape Town</div><div class="ds">Kirstenbosch &middot; Sea Point &middot; Camps Bay</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127965;</div><div><div class="pn">Robben Island</div><div class="pa">Ferry V&amp;A Waterfront &middot; tour ~3h &middot; RESERVAR JA!</div><div class="pd">Onde Mandela ficou preso 18 anos. Guiado por ex-presos politicos. Esgota semanas antes!</div><div class="dr"><a class="di" href="https://robbenisland.plankton.mobi/" target="_blank">&#127915; Tickets oficiais</a></div></div></div>
-  <div class="pi"><div class="pic">&#9968;</div><div><div class="pn">Signal Hill</div><div class="pa">Signal Hill Road, Cape Town</div><div class="pd">Vista 360 da cidade. Canhao disparado ao meio-dia desde 1806.</div></div></div>
-  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Camps Bay Beach</div><div class="pa">Victoria Road, Camps Bay</div><div class="pd">Praia glamourosa com os Doze Apostolos. Codfather &middot; The Bungalow &middot; Cafe Caprice.</div></div></div>
+  <div class="pi"><div class="pic">&#127968;</div><div><div class="pn">Airbnb 40 Lion Street</div><div class="pa">40 Lion St, Gardens, Cape Town &middot; Cod HM5T3WYEMK</div><div style="font-size:10px;color:var(--go);margin-top:2px">Check-in a partir das 15h &middot; pago 100%</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/1P2WuUma9SAQRD6IapiqDdLQVUMsTsXJ3/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
+  <div class="pi"><div class="pic">&#127807;</div><div><div class="pn">Kirstenbosch National Botanical Garden</div><div class="pa">Rhodes Dr, Newlands &middot; ZAR 250/adulto</div><div class="pd">Jardim bot&acirc;nico no sop&eacute; da Table Mountain. Passarela Boomslang com vista 360&deg;.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 08h&ndash;18h</div><div class="dr"><a class="di" href="https://www.webtickets.co.za/v2/event.aspx?itemid=649795" target="_blank">&#127915; Comprar tickets</a></div></div></div>
+  <div class="pi"><div class="pic">&#128694;</div><div><div class="pn">Sea Point Promenade</div><div class="pa">Sea Point, Cape Town</div><div class="pd">Cal&ccedil;ad&atilde;o beira-mar com vista para os Doze Ap&oacute;stolos.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 24h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Mojo Market</div><div class="pa">30 Regent Rd, Sea Point</div><div class="pd">Mercado indoor aberto 365 dias. +30 feirantes, 5 bares, m&uacute;sica ao vivo di&aacute;ria.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 08h&ndash;00h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Mussel Monger &amp; Oyster Bar</div><div class="pa">Sea Point</div><div class="pd">Frutos do mar fresc&iacute;ssimos &mdash; mexilh&otilde;es e ostras.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: ~12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127958;</div><div><div class="pn">Camps Bay Beach</div><div class="pa">Victoria Rd, Camps Bay</div><div class="pd">Praia mais glam de CPT com os Doze Ap&oacute;stolos.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 24h &middot; por do sol ~18h15</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Codfather Seafood &amp; Sushi</div><div class="pa">The Promenade, Victoria Rd, Camps Bay</div><div class="pd">Frutos do mar fresquíssimos escolhidos na pedra.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">The Bungalow</div><div class="pa">Victoria Rd, Camps Bay</div><div class="pd">Coquet&eacute;l ao p&ocirc;r do sol &mdash; ambiente bo&ecirc;mio e relaxado.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 12h&ndash;23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Caf&eacute; Caprice</div><div class="pa">Victoria Rd, Camps Bay</div><div class="pd">Cl&aacute;ssico bo&ecirc;mio de Camps Bay &mdash; animado para drinques.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 10h&ndash;00h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Tiger&rsquo;s Milk Camps Bay</div><div class="pa">Victoria Rd, Camps Bay</div><div class="pd">Vista incr&iacute;vel para os Doze Ap&oacute;stolos, menu casual.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Ter 26/mai: 11h&ndash;23h</div></div></div>
 </div>
 
-<div class="dc"><div class="dn">Dia 15 &middot; Qui 28 mai</div><div class="dt">Cape Town - jantar especial</div><div class="ds">V&amp;A Waterfront &middot; GOLD Restaurant 18h30</div></div>
+<!-- ===== DIA 14 · QUA 27/MAI · CAPE TOWN ===== -->
+<div class="dc"><div class="dn">Dia 14 &middot; Qua 27/mai</div><div class="dt">Cape Town</div><div class="ds">Robben Island &middot; Signal Hill &middot; V&amp;A Waterfront</div></div>
 <div class="card">
-  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront &mdash; dia final</div><div class="pa">Cape Town Waterfront</div><div class="pd"><strong style="color:var(--gol)">Mojo Market</strong> &mdash; mercado de rua artesanal com comidas do mundo; <strong style="color:var(--gol)">Willoughby &amp; Co</strong> &mdash; sushi e frutos do mar premiado; <strong style="color:var(--gol)">Watershed</strong> &mdash; design e artesanato local, otimo para lembranças; <strong style="color:var(--gol)">Chad Henning Photography</strong> &mdash; galeria de fotos de safari e vida selvagem africana.</div></div></div>
-  <div class="pi"><div class="pic">&#129345;</div><div><div class="pn">GOLD Restaurant</div><div class="pa">15 Bennett St, Green Point &middot; reservado 18h30</div><div class="pd">Experiencia cultural unica de Cape Town. Começa com djembe drumming africano interativo (18h30), depois banquete pan-africano de 14 pratos representando cozinhas de todo o continente. Guiado por anfitrioes com trajes tradicionais. Um dos jantares mais memoraveis possiveis em Cape Town. <strong style="color:#e88aaa">Deposito ZAR 510 pago &mdash; saldo no local.</strong></div><div class="dr"><a class="di" href="https://drive.google.com/file/d/18NUPyUYaeyf10N1qLVExeCe13VkR63fF/view?usp=sharing" target="_blank">&#128196; Reserva</a></div></div></div>
-</div>
+  <div class="pi"><div class="pic">&#127965;</div><div><div class="pn">Robben Island</div><div class="pa">Ferry: V&amp;A Waterfront &middot; tour ~3h30 &middot; <strong>RESERVAR J&Aacute;!</strong></div><div class="pd">Onde Mandela ficou preso 18 anos. Guiado por ex-presos pol&iacute;ticos. Esgota semanas antes!</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 27/mai: ferries 09h, 11h e 13h &middot; embarque 30min antes</div><div class="dr"><a class="di" href="https://robbenisland.plankton.mobi/" target="_blank">&#127915; Tickets oficiais</a></div></div></div>
+  <div class="pi"><div class="pic">&#9968;</div><div><div class="pn">Signal Hill</div><div class="pa">Signal Hill Rd, Cape Town</div><div class="pd">Vista 360&deg; da cidade. Canh&atilde;o disparado ao meio-dia desde 1806.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 27/mai: 24h &middot; por do sol ~18h15</div></div></div>
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront</div><div class="pa">Victoria &amp; Alfred Waterfront</div><div class="pd">Final de tarde e jantar no Waterfront.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 27/mai: mall 09h&ndash;21h &middot; restaurantes at&eacute; 23h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Willoughby &amp; Co.</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Sushi e frutos do mar premiado no Waterfront.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 27/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Tiger&rsquo;s Milk V&amp;A Waterfront</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Hambúrgueres cl&aacute;ssicos e vista para o Waterfront.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qua 27/mai: 11h&ndash;23h</div></div></div>
 </div>
 
-<!-- NOMAD -->
+<!-- ===== DIA 15 · QUI 28/MAI · CAPE TOWN · GOLD ===== -->
+<div class="dc"><div class="dn">Dia 15 &middot; Qui 28/mai</div><div class="dt">Cape Town</div><div class="ds">V&amp;A Waterfront &middot; GOLD Restaurant 18h30</div></div>
+<div class="card">
+  <div class="pi"><div class="pic">&#127754;</div><div><div class="pn">V&amp;A Waterfront</div><div class="pa">Victoria &amp; Alfred Waterfront</div><div class="pd">Compras, Watershed e &uacute;ltimas lembran&ccedil;as antes do jantar especial.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qui 28/mai: mall 09h&ndash;21h</div></div></div>
+  <div class="pi"><div class="pic">&#128717;</div><div><div class="pn">Watershed</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Design e artesanato local &mdash; &oacute;timo para lembran&ccedil;as de qualidade.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qui 28/mai: 09h&ndash;21h</div></div></div>
+  <div class="pi"><div class="pic">&#127869;</div><div><div class="pn">Willoughby &amp; Co. &middot; almo&ccedil;o</div><div class="pa">V&amp;A Waterfront</div><div class="pd">Sushi e frutos do mar &mdash; almo&ccedil;o do &uacute;ltimo dia completo.</div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qui 28/mai: 12h&ndash;22h</div></div></div>
+  <div class="pi"><div class="pic">&#129345;</div><div><div class="pn">GOLD Restaurant &middot; JANTAR RESERVADO 18h30</div><div class="pa">15 Bennett St, Green Point &middot; Ref CC3693825</div><div class="pd">Djembe drumming (18h30) + banquete pan-africano 14 pratos. <strong style="color:#e88aaa">Dep&oacute;sito ZAR 510 pago &mdash; saldo no local.</strong></div><div style="font-size:10px;color:var(--gl);margin-top:2px">&#128336; Qui 28/mai: drumming 18h30 &rarr; banquete ~19h30</div><div class="dr"><a class="di" href="https://drive.google.com/file/d/18NUPyUYaeyf10N1qLVExeCe13VkR63fF/view?usp=sharing" target="_blank">&#128196; Reserva GOLD</a></div></div></div>
+</div>
+
+</div>
+
 <div id="sec-nomad" class="sec">
 <p class="sh">Nomad - dinheiro para os hoteis</p>
 <div style="font-size:10px;color:var(--ts);margin-bottom:10px;line-height:1.6">Cotacao usada: <strong style="color:var(--gol)">USD 1 = ZAR 17</strong> com +15% de margem. Coloque antes das datas abaixo!</div>
@@ -453,6 +572,7 @@ function updateTotal() {
 </div>
 
 <!-- CARROS -->
+
 <div id="sec-carro" class="sec">
 <p class="sh">Carro 1 - Johannesburg</p>
 <div class="card">
@@ -496,5 +616,24 @@ function updateTotal() {
   <button class="nb" onclick="goTo('nomad', this)"><div class="ni">&#128179;</div><span>Nomad</span></button>
   <button class="nb" onclick="goTo('carro', this)"><div class="ni">&#128663;</div><span>Carros</span></button>
 </nav>
+<script>
+function tick(){
+  var now=new Date(),target=new Date('2026-05-14T22:30:00-03:00');
+  var diff=target-now;
+  if(diff<=0){
+    ['cdn-d','cdn-h','cdn-m','cdn-s'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent='00';});
+    var msg=document.getElementById('cdn-msg');if(msg)msg.textContent='Bom voo! ✈️';
+    return;
+  }
+  var d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+  var pad=function(n){return String(n).padStart(2,'0');};
+  document.getElementById('cdn-d').textContent=pad(d);
+  document.getElementById('cdn-h').textContent=pad(h);
+  document.getElementById('cdn-m').textContent=pad(m);
+  document.getElementById('cdn-s').textContent=pad(s);
+}
+tick();setInterval(tick,1000);
+</script>
 </body>
-</html>
+</html
+>
